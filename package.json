@@ -1,0 +1,14 @@
+{
+  "name": "suport-tools-demo",
+  "version": "1.0.0",
+  "description": "Cypress Demo for support-tools project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Testing command executed"
+  },
+  "author": "Ricardo Arreola",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^7.6.0"
+  }
+}
