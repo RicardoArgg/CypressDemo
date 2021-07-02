@@ -1,1 +1,12 @@
-{}
+{
+  "responseTimeout": 45000,
+  "defaultCommandTimeout": 25000,
+  "testFiles": "**/*.{feature,features}",
+  "env": {
+    "toto": "tutu",
+    "loadConfig": "dev",
+    "TAGS": "not @skip",
+    "username": "omnioneadmin@patronweb.net",
+    "password": "Omnitracs17!"
+  }
+}

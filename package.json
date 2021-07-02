@@ -9,6 +9,16 @@
   "author": "Ricardo Arreola",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^7.6.0"
+    "cypress": "^7.6.0",
+    "cypress-cucumber-preprocessor": "^2.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/report/cucumber_reports",
+      "filePrefix": "",
+      "fileSuffix": ".cucumber"
+    }
   }
 }
