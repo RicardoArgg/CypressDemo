@@ -1,0 +1,118 @@
+[
+  {
+    "keyword": "Feature",
+    "name": "First suite testing support-tools",
+    "line": 1,
+    "id": "first-suite-testing-support-tools",
+    "tags": [],
+    "uri": "NavBar.feature",
+    "elements": [
+      {
+        "id": "first-suite-testing-support-tools;go-to-es-tab",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "Go to ES tab",
+        "tags": [
+          {
+            "name": "@tagOne",
+            "line": 7
+          },
+          {
+            "name": "@GeniusBar",
+            "line": 7
+          },
+          {
+            "name": "@First",
+            "line": 7
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I log in",
+            "result": {
+              "status": "passed",
+              "duration": 7451000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "I click the ES tab",
+            "result": {
+              "status": "passed",
+              "duration": 264000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I validate the ES page",
+            "result": {
+              "status": "passed",
+              "duration": 780000000
+            }
+          }
+        ]
+      },
+      {
+        "id": "first-suite-testing-support-tools;go-to-omnitracs-one-tab",
+        "keyword": "Scenario",
+        "line": 13,
+        "name": "Go to Omnitracs One tab",
+        "tags": [
+          {
+            "name": "@tagOne",
+            "line": 12
+          },
+          {
+            "name": "@GeniusBar",
+            "line": 12
+          },
+          {
+            "name": "@Second",
+            "line": 12
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "I log in",
+            "result": {
+              "status": "passed",
+              "duration": 10435000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 14,
+            "name": "I click the Omnitracs One tab",
+            "result": {
+              "status": "passed",
+              "duration": 241000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "I validate the Omnitracs One page",
+            "result": {
+              "status": "passed",
+              "duration": 522000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

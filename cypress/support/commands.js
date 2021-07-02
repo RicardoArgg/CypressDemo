@@ -19,7 +19,7 @@ Cypress.Commands.add('loginSso', function() {
     cy.get('a[onclick="postOk();"]').click()
  })
 
- Cypress.Commands.add('loginSso', function() { 
+ Cypress.Commands.add('validateSupportToolsHeader', function() { 
     cy.log("Validating logo is displayed in Support tools home")
     cy.get('button#sideBarButton').should('be.visible')
  })
