@@ -4,6 +4,11 @@ Background: Login
 Given I log in
 
 @tagOne @GeniusBar @First
-Scenario: Open page click and validate
-Given I click the submit button
+Scenario: Go to ES tab
+Given I click the ES tab
+Then I got an error message
+
+@tagOne @GeniusBar @Second
+Scenario: Go to Omnitracs One tab
+Given I click the Omnitracs One tab
 Then I got an error message
