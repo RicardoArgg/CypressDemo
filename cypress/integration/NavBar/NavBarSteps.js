@@ -4,8 +4,7 @@ import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 
 Given("I log in", function () {
     cy.visit('home')
-    cy.get('#header', { timeout: 15000 }).should('be.visible')
-    cy.log("Logging in from SuiteOne steps")
+    cy.validateLoginLogo()
     cy.loginSso()
     cy.validateSupportToolsHeader()
 })

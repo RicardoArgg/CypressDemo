@@ -1,5 +1,5 @@
 {
-  "responseTimeout": 45000,
+  "responseTimeout": 20000,
   "defaultCommandTimeout": 25000,
   "testFiles": "**/*.{feature,features}",
   "env": {

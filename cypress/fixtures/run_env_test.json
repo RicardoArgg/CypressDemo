@@ -1,4 +1,4 @@
 {
-    "baseUrl": "https://support-tools-ui-support-tools-test.apps.dc11-stage-01.cld.omnitracs.com/"
-    
+    "baseUrl": "https://support-tools-ui-support-tools-test.apps.dc11-stage-01.cld.omnitracs.com/",
+    "responseTimeout": 15000
 }
