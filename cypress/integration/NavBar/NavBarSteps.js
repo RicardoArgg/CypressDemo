@@ -1,64 +1,76 @@
 /// <reference types="Cypress" />
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 
-var navBar = new NavBar()
+import NavBar from './NavBarPage';
 
 Given("I log in", function () {
     cy.visit('home')
     cy.login()
+    cy.get('div > canvas')
 })
 Then("I Validate the support tools portal is loaded", function () {
     cy.validateSupportToolsHeader()
 })
 
-Given("I click the submit button", function () {
-    cy.log("Clicking the submit button")
-    cy.get('div#postButton>a').click()
+Then("I see results displayed", function () {
+    NavBar.ValidateResultsDivs()
 })
 
-Then("I got an error message", function () {
-    cy.get('div#username-text').invoke("attr", "class").should('contain', 'show')
+And("I see results displayed", function () {
+    NavBar.ValidateResultsDivs()
+})
+
+Then("I dont see results displayed", function () {
+    NavBar.ValidateThereAreNoResults()
 })
 
 Given("I click the ES tab", function () {
-    cy.get('a[href="/es"]').click()
+    NavBar.ClickTabByText('ES')
 })
 
 Given("I click the Omnitracs One tab", function () {
-    navBar.ClickTabByText('Omnitracs One')
+    NavBar.ClickTabByText('Omnitracs One')
 })
 
 Then("I validate the ES page", function () {
-    navBar.ValidateColumnsOnPage(7)
-    navBar.ClickTabByText('ES')
+    NavBar.ValidateColumnsOnPage(7)
+    NavBar.ClickTabByText('ES')
 })
 
 Then("I validate the Omnitracs One page", function () {
-    navBar.ValidateColumnsOnPage(7)
-    navBar.ClickTabByText('Omnitracs One')
+    NavBar.ValidateColumnsOnPage(7)
+    NavBar.ClickTabByText('Omnitracs One')
 })
 
 Given("I click on search", function () {
-    navBar.ClickSearch()
+    NavBar.ClickSearch()
 })
 
-Then("I got an error about the required field", function () {
-    navBar.ValidateErrorMessageSays('The id is required')
+Then("I get an error about the required field", function () {
+    NavBar.ValidateErrorMessageSays('The id is required')
 })
 
 Then("I dont get any errors", function () {
-    navBar.ValidateThereAreNoErrorMessage()
+    NavBar.ValidateThereAreNoErrorMessages()
 })
 
 Then("I select from the dropdown the option {string}", (option) => {
-    navBar.SelectDropdownValue(option)
+    NavBar.SelectDropdownValue(option)
 })
 
 Then("I enter a filter {string}", (filter) => {
-    navBar.SetFilter(filter)
+    NavBar.SetFilter(filter)
 })
 
 Then("I click the radio option for {string}", (radioText) => {
-    navBar.SelectRadioButton(radioText)
+    NavBar.SelectRadioButton(radioText)
+})
+
+Then("I see an error message about device not found", () => {
+    NavBar.ValidateErrorMessageSays('Device not found')
+})
+
+Then("I see an error message {string}", (message) => {
+    NavBar.ValidateErrorMessageSays(message)
 })
 

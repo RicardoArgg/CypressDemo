@@ -10,8 +10,6 @@
 //
 //
 Cypress.Commands.add('login', function () {
-
-   cy.wait(5000)
    cy.get("head>title", { timeout: 60000 }).should(($x) => {
       expect($x).to.not.equal('Support Tools Portal');
    })

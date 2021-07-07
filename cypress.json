@@ -1,9 +1,12 @@
 {
   "responseTimeout": 20000,
+  "timeout": 10000,
   "defaultCommandTimeout": 25000,
   "testFiles": "**/*.{feature,features}",
+  "viewportWidth": 1200,
+  "viewportHeight": 720,
   "env": {
-    "TAGS": "not @skip  @only",
+    "TAGS": "not @only",
     "username": "omnioneadmin@patronweb.net",
     "password": "Omnitracs17!"
   }

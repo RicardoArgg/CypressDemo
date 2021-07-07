@@ -18,13 +18,15 @@ class NavBar {
 
     static SelectDropdownValue(optionText) {
         //select 
-        cy.get('input[name="searchBy"]').as('element').should('be.visible')
+        cy.get('select[name="searchBy"]').as('element').should('be.visible')
         cy.get('@element').select(searchBy[optionText])
     }
 
     static SetFilter(filter) {
+        cy.wait(2000)
         cy.get('input[onload="setHistoryList()"]').as('element').should('be.visible')
-        cy.get('@element').type(filter)
+        cy.get('@element').type(filter, {delay: 50})
+        cy.wait(2000)
     }
 
     static ClickSearch() {
@@ -33,14 +35,18 @@ class NavBar {
         cy.get('@element').click()
     }
 
-    static ValidateThereAreNoErrorMessage() {
-        cy.get('div[class="margin-text-validation"]').as('element')
-        cy.get('@element').next().children().should('not.be.visible')
+    static ValidateThereAreNoErrorMessages() {
+        // cy.get('st-device').find('div').find('span').should('not.exist');
+        // cy.get('st-device > div > span').should('not.exist');
+        cy.wait(5000)
+        cy.get('st-device > div > span').should('not.exist');
+        // cy.get('div[class="margin-text-validation"]').next().children().should('not.exist')
     }
 
     static ValidateErrorMessageSays(error) {
-        cy.get('div[class="margin-text-validation"]').as('element')
-        cy.get('@element').next().children().should('have.text', error)
+        cy.contains(error).should('be.visible') // *page contains
+        //cy.get('div[class="margin-text-validation"]').as('element')
+        //cy.get('@element').next().children().should('contain.text', error)
     }
 
     static SelectRadioButton(radioText) {
@@ -49,11 +55,21 @@ class NavBar {
     }
 
     static ValidateColumnsOnPage(numberOfColumns) {
-        cy.get('div.column').children().should('have.length', numberOfColumns)
+        cy.get('div.column').should('have.length', numberOfColumns)
     }
 
     static ClickTabByText(tabText) {
         cy.get("div.navbar-end").contains(tabText).as('element')
-        cy.get('@Element').should('be.visible').click()
+        cy.get('@element').should('be.visible').click()
+    }
+
+    static ValidateResultsDivs() {
+        cy.get('div.div-info').should('have.length.at.least', 1)
+    }
+
+    static ValidateThereAreNoResults() {
+        cy.get('div.div-info').should('not.exist')
     }
 }
+
+export default NavBar;

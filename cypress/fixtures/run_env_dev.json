@@ -1,7 +1,6 @@
 {
     "baseUrl": "https://support-tools.dev.omnitracsone.com/",
     "env": {
-        "TAGS": "not @skip",
         "username": "adamatspeedy@gmail.com",
         "password": "Omnitracs17"
     }
