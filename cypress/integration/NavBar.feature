@@ -19,7 +19,7 @@ Feature: Support-tools testing Demo - Navigation Bar feature
         Given I click on search
         Then I got an error about the required field
 
-    @TC-ID004 @GeniusBar
+    @TC-ID004 @GeniusBar  @only
     Scenario Outline: Valid results searching by Device Id are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'

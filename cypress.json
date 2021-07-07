@@ -3,7 +3,7 @@
   "defaultCommandTimeout": 25000,
   "testFiles": "**/*.{feature,features}",
   "env": {
-    "TAGS": "not @skip",
+    "TAGS": "not @skip  @only",
     "username": "omnioneadmin@patronweb.net",
     "password": "Omnitracs17!"
   }

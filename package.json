@@ -4,7 +4,8 @@
   "description": "Cypress Demo for support-tools project",
   "main": "index.js",
   "scripts": {
-    "test": "echo Testing command executed"
+    "dev": "npx cypress open -e configFile=dev",
+    "test": "npx cypress open -e configFile=test"
   },
   "author": "Ricardo Arreola",
   "license": "ISC",
