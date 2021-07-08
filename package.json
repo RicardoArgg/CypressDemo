@@ -4,22 +4,27 @@
   "description": "Cypress Demo for support-tools project",
   "main": "index.js",
   "scripts": {
-    "dev": "npx cypress open -e configFile=dev",
-    "test": "npx cypress open -e configFile=test"
+    "test": "npx cypress open -e configFile=dev",
+    "mocha-merge": "mochawesome-merge ./cypress/report/mochawesome_reports/*.json -o cypress/report/mochawesome_complete/complete-report.json",
+    "mocha-marge": "marge cypress/report/mochawesome_complete/complete-report.json -f complete-report -o cypress/report/mochawesome_complete",
+    "mocha-full": "npm run mocha-merge && npm run mocha-marge"
   },
   "author": "Ricardo Arreola",
   "license": "ISC",
   "dependencies": {
     "cypress": "^7.6.0",
-    "cypress-cucumber-preprocessor": "^2.4.0"
+    "cypress-cucumber-preprocessor": "^2.4.0",
+    "mocha": "^9.0.2",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^4.2.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
     "cucumberJson": {
       "generate": true,
-      "outputFolder": "cypress/report/cucumber_reports",
+      "outputFolder": "cypress/report/cucumberJSON_reports",
       "filePrefix": "",
-      "fileSuffix": ".cucumber"
+      "fileSuffix": "_cucumber"
     }
   }
 }

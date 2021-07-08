@@ -10,12 +10,15 @@ class Selectors {
             case 'searchButton':            return cy.get('button[class="button is-primary is-rounded"]');
             case 'inputErrorMessage':       return cy.get('st-device > div > span');
             case 'radioButtons':            return cy.get('input[type="radio"]');
-            case 'tabElements':             return cy.get('div.navbar-end');
+            case 'esTab':                   return cy.get('a[href="/es"]');
+            case 'omnitracsOneTab':         return cy.get('a[href="/omnitracsone"]');
+            case 'ES tab':                  return cy.get('a[href="/es"]');
+            case 'Omnitracs One tab':       return cy.get('a[href="/omnitracsone"]');
             case 'DeviceInfoElements':      return cy.get('div.div-info');
         }
     }
 
-    static EsPage(webElement) {
+    static esPage(webElement) {
         switch (webElement) {
             case 'columnElements':      return cy.get('div.column');
             case 'cardTitle':           return cy.get('div.card-content>div>div.title');

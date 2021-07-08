@@ -12,13 +12,13 @@ Feature: Support Tools Portal testing Demo - ES page feature
     @TC-ID011 @GeniusBar @only
     Scenario Outline: Validate links from ES tab
         Given I click the ES tab
-        Then I validate the ES page
+        Then I validate '7' cards are displayed
         And I see '<card-title>' card on screen
         And I validate the link in '<card-title>' is equals as '<url>'
 
     Examples:
     |   card-title    |   url    |
-    |   HUPS          |   https://ocid.omnitracs.com     |
+    |   HUPS          |   https://intgapp.omnitracs.com/hupsuiWeb/  |
     |   ICS           |   https://intgapp.omnitracs.com/icsuiWeb  |
     |   Sales EAR     |   https://intgapp.omnitracs.com/salesEARWeb   |
     |   OPS           |   https://intgapp.omnitracs.com/opsuiWeb  |

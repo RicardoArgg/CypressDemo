@@ -10,14 +10,15 @@
 //
 //
 Cypress.Commands.add('login', function () {
-   cy.get("head>title", { timeout: 60000 }).should(($x) => {
-      expect($x).to.not.equal('Support Tools Portal');
-   })
-   //cy.title().should('not.have.text','Support Tools Portal', {timeout: 10000})
 
+   //cy.get("head>title", { timeout: 60000 }).should(($x) => {
+   //   expect($x).to.not.equal('Support Tools Portal');
+   //})
+   //cy.title().should('not.have.text','Support Tools Portal', {timeout: 10000})
+   cy.wait(2000)
    cy.get("head").find('title').invoke('text').then((text) => {
       switch (text) {
-         case 'OmnitracsOne Login':
+         default:
             cy.log("Executing OmnitracsOne Login...")
             cy.validateNewLogin()
             cy.loginNew()
@@ -26,6 +27,9 @@ Cypress.Commands.add('login', function () {
             cy.log("Executing Sign On Login...")
             cy.validateLogin()
             cy.loginSso()
+            break;
+         case 'Support Tools Portal':
+            cy.log("Already logged in")
             break;
       }
    });

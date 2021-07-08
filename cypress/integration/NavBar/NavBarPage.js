@@ -12,6 +12,11 @@ var radioValues = {
     "UAT": "sotiUatEnv",
 }
 
+var tabsElement = {
+    "ES": "esTab",
+    "Omnitracs One": "omnitracsOneTab",
+}
+
 class NavBar {
     static SelectDropdownValue(optionText) {
         Selectors.navBar('searchByDropdown')
@@ -58,8 +63,7 @@ class NavBar {
     }
 
     static ClickTabByText(tabText) {
-        Selectors.navBar('tabElements').contains(tabText)
-            .should('be.visible').click()
+        Selectors.navBar(tabText + ' tab').click()
     }
 
     static ValidateResultsDivs() {
@@ -69,7 +73,7 @@ class NavBar {
 
     static ValidateThereAreNoResults() {
         Selectors.navBar('DeviceInfoElements')
-        cy.get('@ele').should('not.exist')
+            .should('not.exist')
     }
 }
 

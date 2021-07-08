@@ -24,22 +24,17 @@ Then("I dont see results displayed", function () {
     NavBar.ValidateThereAreNoResults()
 })
 
-Given("I click the ES tab", function () {
-    NavBar.ClickTabByText('ES')
-})
-
-Given("I click the Omnitracs One tab", function () {
-    NavBar.ClickTabByText('Omnitracs One')
+Given("I click the {string} tab", function (tabText) {
+    NavBar.ClickTabByText(tabText)
 })
 
 Then("I validate the ES page", function () {
+    //version 1, enhanced on EsSteps  "I validate {7} cards are displayed"
     NavBar.ValidateColumnsOnPage(7)
-    NavBar.ClickTabByText('ES')
 })
 
 Then("I validate the Omnitracs One page", function () {
     NavBar.ValidateColumnsOnPage(7)
-    NavBar.ClickTabByText('Omnitracs One')
 })
 
 Given("I click on search", function () {
