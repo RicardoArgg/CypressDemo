@@ -2,29 +2,36 @@
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 
 import NavBar from '../NavBar/NavBarPage';
-import EsPage from './EsPage';
+import OmniOne from '../OmniOne/OmniOnePage';
+
+var url = null;
 
 Given("I log in", function () {
     cy.visit('home')
     cy.login()
 })
 
-Then("I Validate the support tools portal is loaded", function () {
+Then("I Validate the support tools portal is loaded", () => {
     cy.validateSupportToolsHeader()
 })
 
-Given("I click the ES tab", function () {
-    NavBar.ClickTabByText('ES')
+Given("I click the Omnitracs One tab", () => {
+    NavBar.ClickTabByText('Omnitracs One')
 })
 
 Then("I validate {string} cards are displayed", function (cardNumber) {
-    EsPage.ValidateColumnsOnPage(cardNumber)
+    OmniOne.ValidateColumnsOnPage(cardNumber)
 })
 
-Then("I see {string} card on screen", function (cardText) {
-    EsPage.ValidateThereIsCard(cardText)
+Then("I see {string} card on screen", (cardText) => {
+    cy.wait(1000)
+    OmniOne.ValidateThereIsCard(cardText)
 })
 
-And("I validate the link in {string} is equals as {string}", (cardText, url) => {
-    EsPage.ValidateCardUrl(cardText, url)
+And("I validate the {string} card contains a link", (cardText) => {
+    OmniOne.ValidateCardContainsUrl(cardText)
+})
+
+And("I Validate the response code of the website is {int}", (respCode) => {
+    OmniOne.GoToUrl(respCode)
 })

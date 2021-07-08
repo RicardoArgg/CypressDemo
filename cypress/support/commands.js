@@ -29,11 +29,11 @@ Cypress.Commands.add('login', function () {
             cy.loginSso()
             break;
          case 'Support Tools Portal':
-            cy.log("Already logged in")
+            cy.log("Executing Sign On Login...")
             break;
       }
    });
-   cy.get('div > canvas')
+   cy.get('div>canvas')
 })
 
 Cypress.Commands.add('loginSso', function () {

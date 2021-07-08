@@ -4,24 +4,20 @@ Feature: Support Tools Portal testing Demo - Omnitracs One page feature
         Given I log in
         Then I Validate the support tools portal is loaded
 
-    @TC-ID0031 @GeniusBar @only
-    Scenario: Go to Omnitracs One tab and validate
-        Given I click the 'Omnitracs One' tab
-        Then I validate '7' cards are displayed
-
-    @TC-ID031 @GeniusBar @only
-    Scenario Outline: Validate links from Omnitracs One tab
-        Given I click the 'Omnitracs One' tab
+    @TC-ID031 @GeniusBar
+    Scenario Outline: Validate cards from Omnitracs One tab contains correct links
+        Given I click the Omnitracs One tab
         Then I validate '7' cards are displayed
         And I see '<card-title>' card on screen
-        And I validate the link in '<card-title>' is equals as '<url>'
+        And I validate the '<card-title>' card contains a link
+        And I Validate the response code of the website is <resp-code>
 
         Examples:
-            | card-title          | url                                       |
-            | Tracker             | https://intgapp.omnitracs.com/hupsuiWeb/  |
-            | GOM                 | https://intgapp.omnitracs.com/icsuiWeb    |
-            | Vehicle data source | https://intgapp.omnitracs.com/salesEARWeb |
-            | GOM Bluetooth/WiFi  | https://intgapp.omnitracs.com/opsuiWeb    |
-            | CDS                 | https://ocid.omnitracs.com                |
-            | Looker Tool         | https://provhub.omnitracs.com             |
-            | Status Dashboard    | https://customer.omnitracs.com/system/#!/ |
+            | card-title          | resp-code    |
+            | Tracker             | 200          |
+            | GOM                 | 401          |
+            | Vehicle data source | 401          |
+            | GOM Bluetooth/WiFi  | 401          |
+            | CDS                 | 401          |
+            | Looker Tool         | 200          |
+            | Status Dashboard    | 200          |

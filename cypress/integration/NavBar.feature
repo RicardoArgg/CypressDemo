@@ -4,7 +4,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         Given I log in
         Then I Validate the support tools portal is loaded
 
-    @TC-ID001 @GeniusBar @First
+    @TC-ID001 @GeniusBar
     Scenario: Go to ES tab and validate
         Given I click the ES tab
         Then I validate the ES page

@@ -1,12 +1,25 @@
 {
+  "watchForFileChanges": false,
   "responseTimeout": 20000,
   "timeout": 10000,
   "defaultCommandTimeout": 25000,
   "testFiles": "**/*.{feature,features}",
   "viewportWidth": 1200,
   "viewportHeight": 720,
+  "reporter": "mochawesome",
+  "video": false,
+  "screenshotOnRunFailure": false,
+  "reporterOptions": {
+    "reportFilename": "automated-execution",
+    "files": "cypress/report/mochawesome_reports/*.json",
+    "reportDir": "cypress/report/mochawesome_reports/",
+    "overwrite": false,
+    "html": false,
+    "json": false,
+    "timestamp": "yyyymmdd_HHMMss"
+  },
   "env": {
-    "TAGS": "@only",
+    "TAGS": "not @only",
     "username": "omnioneadmin@patronweb.net",
     "password": "Omnitracs17!"
   }
