@@ -1,21 +1,21 @@
-Feature: Support-tools testing Demo - Navigation Bar feature
+Feature: Support Tools Portal testing Demo - Navigation Bar feature
 
-    Background: Login
+    Background: Login to the Support Tools Portal
         Given I log in
         Then I Validate the support tools portal is loaded
 
     @TC-ID001 @GeniusBar @First
-    Scenario: Go to ES tab
+    Scenario: Go to ES tab and validate
         Given I click the ES tab
         Then I validate the ES page
 
     @TC-ID002 @GeniusBar
-    Scenario: Go to Omnitracs One tab
+    Scenario: Go to Omnitracs One tab and validate
         Given I click the Omnitracs One tab
         Then I validate the Omnitracs One page
 
     @TC-ID003 @GeniusBar
-    Scenario: empty search get an error
+    Scenario: Empty device search get an error
         Given I click on search
         Then I get an error about the required field
 

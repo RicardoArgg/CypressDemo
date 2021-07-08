@@ -74,3 +74,11 @@ Then("I see an error message {string}", (message) => {
     NavBar.ValidateErrorMessageSays(message)
 })
 
+And("I see {string} card on screen", (cardText) => {
+    NavBar.ValidateThereIsCard(cardText)
+})
+
+And("I validate the link in {string} is equals as {string}", (cardText, url) => {
+    NavBar.ValidateCardUrl(cardText, url)
+})
+

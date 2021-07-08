@@ -6,7 +6,7 @@
   "viewportWidth": 1200,
   "viewportHeight": 720,
   "env": {
-    "TAGS": "not @only",
+    "TAGS": "@only",
     "username": "omnioneadmin@patronweb.net",
     "password": "Omnitracs17!"
   }

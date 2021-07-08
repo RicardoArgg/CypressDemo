@@ -29,6 +29,7 @@ Cypress.Commands.add('login', function () {
             break;
       }
    });
+   cy.get('div > canvas')
 })
 
 Cypress.Commands.add('loginSso', function () {
