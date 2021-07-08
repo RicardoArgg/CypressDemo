@@ -15,17 +15,17 @@ var radioValues = {
 class EsPage {
     static ValidateColumnsOnPage(numberOfColumns) {
         Selectors.navBar('columnElements')
-        .should('have.length', numberOfColumns)
+            .should('have.length', numberOfColumns)
     }
 
     static ValidateThereIsCard(cardText) {
         Selectors.navBar('cardTitle')
-        .should('contain.text', cardText)
+            .should('contain.text', cardText)
     }
 
     static ValidateCardUrl(cardText, url) {
         Selectors.navBar('cardUrl')
-        .contains(cardText).invoke('attr.href').should('equal',url)
+            .contains(cardText).invoke('attr.href').should('equal', url)
     }
 }
 

@@ -4,7 +4,7 @@ Feature: Support Tools Portal testing Demo - ES page feature
         Given I log in
         Then I Validate the support tools portal is loaded
 
-    @TC-ID0021 @GeniusBar
+    @TC-ID0021 @GeniusBar @only
     Scenario: Go to ES tab and validate
         Given I click the ES tab
         Then I validate '7' cards are displayed
