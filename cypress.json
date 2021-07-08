@@ -13,13 +13,13 @@
     "reportFilename": "automated-execution",
     "files": "cypress/report/mochawesome_reports/*.json",
     "reportDir": "cypress/report/mochawesome_reports/",
-    "overwrite": false,
-    "html": false,
-    "json": false,
+    "overwrite": true,
+    "html": true,
+    "json": true,
     "timestamp": "yyyymmdd_HHMMss"
   },
   "env": {
-    "TAGS": "not @only",
+    "TAGS": "",
     "username": "omnioneadmin@patronweb.net",
     "password": "Omnitracs17!"
   }

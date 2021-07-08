@@ -31,7 +31,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 9131000000
+              "duration": 13241000000
             }
           },
           {
@@ -41,7 +41,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 23000000
             }
           },
           {
@@ -51,7 +51,7 @@
             "name": "I click the ES tab",
             "result": {
               "status": "undefined",
-              "duration": 5000000
+              "duration": 6000000
             }
           },
           {
@@ -89,7 +89,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4549000000
+              "duration": 6446000000
             }
           },
           {
@@ -99,7 +99,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 19000000
             }
           },
           {
@@ -147,7 +147,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3821000000
+              "duration": 6092000000
             }
           },
           {
@@ -167,7 +167,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 162000000
+              "duration": 158000000
             }
           },
           {
@@ -177,7 +177,7 @@
             "name": "I get an error about the required field",
             "result": {
               "status": "passed",
-              "duration": 29000000
+              "duration": 27000000
             }
           }
         ]
@@ -206,7 +206,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 5651000000
+              "duration": 7870000000
             }
           },
           {
@@ -216,7 +216,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 19000000
             }
           },
           {
@@ -226,7 +226,7 @@
             "name": "I select from the dropdown the option 'Device Id'",
             "result": {
               "status": "passed",
-              "duration": 216000000
+              "duration": 219000000
             }
           },
           {
@@ -236,7 +236,7 @@
             "name": "I enter a filter '170001031'",
             "result": {
               "status": "passed",
-              "duration": 533000000
+              "duration": 515000000
             }
           },
           {
@@ -246,7 +246,7 @@
             "name": "I click the radio option for 'Prod'",
             "result": {
               "status": "passed",
-              "duration": 37000000
+              "duration": 32000000
             }
           },
           {
@@ -256,7 +256,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 182000000
+              "duration": 170000000
             }
           },
           {
@@ -266,7 +266,7 @@
             "name": "I dont get any errors",
             "result": {
               "status": "passed",
-              "duration": 5019000000
+              "duration": 5018000000
             }
           },
           {
@@ -276,7 +276,7 @@
             "name": "I see results displayed",
             "result": {
               "status": "passed",
-              "duration": 46000000
+              "duration": 48000000
             }
           }
         ]
@@ -305,7 +305,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3669000000
+              "duration": 7000000000
             }
           },
           {
@@ -315,7 +315,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 19000000
             }
           },
           {
@@ -325,7 +325,7 @@
             "name": "I select from the dropdown the option 'Device Id'",
             "result": {
               "status": "passed",
-              "duration": 201000000
+              "duration": 218000000
             }
           },
           {
@@ -335,7 +335,7 @@
             "name": "I enter a filter '170001029'",
             "result": {
               "status": "passed",
-              "duration": 532000000
+              "duration": 528000000
             }
           },
           {
@@ -345,7 +345,7 @@
             "name": "I click the radio option for 'Prod'",
             "result": {
               "status": "passed",
-              "duration": 38000000
+              "duration": 48000000
             }
           },
           {
@@ -355,7 +355,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 185000000
+              "duration": 169000000
             }
           },
           {
@@ -365,7 +365,7 @@
             "name": "I dont get any errors",
             "result": {
               "status": "passed",
-              "duration": 5047000000
+              "duration": 5013000000
             }
           },
           {
@@ -375,7 +375,7 @@
             "name": "I see results displayed",
             "result": {
               "status": "passed",
-              "duration": 40000000
+              "duration": 46000000
             }
           }
         ]
@@ -404,7 +404,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4203000000
+              "duration": 7223000000
             }
           },
           {
@@ -414,7 +414,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 21000000
+              "duration": 19000000
             }
           },
           {
@@ -424,7 +424,7 @@
             "name": "I select from the dropdown the option 'Device Id'",
             "result": {
               "status": "passed",
-              "duration": 204000000
+              "duration": 233000000
             }
           },
           {
@@ -434,7 +434,7 @@
             "name": "I enter a filter '170012345'",
             "result": {
               "status": "passed",
-              "duration": 515000000
+              "duration": 516000000
             }
           },
           {
@@ -444,7 +444,7 @@
             "name": "I click the radio option for 'Prod'",
             "result": {
               "status": "passed",
-              "duration": 35000000
+              "duration": 39000000
             }
           },
           {
@@ -454,7 +454,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 181000000
+              "duration": 179000000
             }
           },
           {
@@ -464,7 +464,7 @@
             "name": "I see an error message about device not found",
             "result": {
               "status": "passed",
-              "duration": 2179000000
+              "duration": 2538000000
             }
           },
           {
@@ -474,7 +474,7 @@
             "name": "I dont see results displayed",
             "result": {
               "status": "passed",
-              "duration": 6000000
+              "duration": 4000000
             }
           }
         ]
@@ -503,7 +503,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4333000000
+              "duration": 6720000000
             }
           },
           {
@@ -513,7 +513,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 19000000
             }
           },
           {
@@ -523,7 +523,7 @@
             "name": "I select from the dropdown the option 'Device Id'",
             "result": {
               "status": "passed",
-              "duration": 212000000
+              "duration": 204000000
             }
           },
           {
@@ -533,7 +533,7 @@
             "name": "I enter a filter '990001029'",
             "result": {
               "status": "passed",
-              "duration": 517000000
+              "duration": 514000000
             }
           },
           {
@@ -543,7 +543,7 @@
             "name": "I click the radio option for 'Prod'",
             "result": {
               "status": "passed",
-              "duration": 44000000
+              "duration": 41000000
             }
           },
           {
@@ -553,7 +553,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 175000000
+              "duration": 187000000
             }
           },
           {
@@ -563,7 +563,7 @@
             "name": "I see an error message about device not found",
             "result": {
               "status": "passed",
-              "duration": 2216000000
+              "duration": 2103000000
             }
           },
           {
@@ -573,7 +573,7 @@
             "name": "I dont see results displayed",
             "result": {
               "status": "passed",
-              "duration": 5000000
+              "duration": 4000000
             }
           }
         ]
@@ -602,7 +602,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3285000000
+              "duration": 4912000000
             }
           },
           {
@@ -612,7 +612,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 18000000
             }
           },
           {
@@ -622,7 +622,7 @@
             "name": "I select from the dropdown the option 'Business GUID'",
             "result": {
               "status": "passed",
-              "duration": 207000000
+              "duration": 206000000
             }
           },
           {
@@ -632,7 +632,7 @@
             "name": "I enter a filter '617911432F274CE496CBC1E4DC3535A1'",
             "result": {
               "status": "passed",
-              "duration": 1292000000
+              "duration": 1286000000
             }
           },
           {
@@ -642,7 +642,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 174000000
+              "duration": 163000000
             }
           },
           {
@@ -652,7 +652,7 @@
             "name": "I dont get any errors",
             "result": {
               "status": "passed",
-              "duration": 5055000000
+              "duration": 5008000000
             }
           }
         ]
@@ -681,7 +681,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3855000000
+              "duration": 7857000000
             }
           },
           {
@@ -691,7 +691,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 21000000
+              "duration": 18000000
             }
           },
           {
@@ -701,7 +701,7 @@
             "name": "I select from the dropdown the option 'Business GUID'",
             "result": {
               "status": "passed",
-              "duration": 230000000
+              "duration": 233000000
             }
           },
           {
@@ -711,7 +711,7 @@
             "name": "I enter a filter 'BEB84C8EB9761B63E0437A01EC0A3055'",
             "result": {
               "status": "passed",
-              "duration": 1276000000
+              "duration": 1297000000
             }
           },
           {
@@ -721,7 +721,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 164000000
+              "duration": 166000000
             }
           },
           {
@@ -731,7 +731,7 @@
             "name": "I dont get any errors",
             "result": {
               "status": "passed",
-              "duration": 5050000000
+              "duration": 5009000000
             }
           }
         ]
@@ -760,7 +760,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3936000000
+              "duration": 7420000000
             }
           },
           {
@@ -770,7 +770,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 18000000
             }
           },
           {
@@ -780,7 +780,7 @@
             "name": "I select from the dropdown the option 'Device Group GUID'",
             "result": {
               "status": "passed",
-              "duration": 212000000
+              "duration": 225000000
             }
           },
           {
@@ -790,7 +790,7 @@
             "name": "I enter a filter 'E8A4EFFE362C4604BF91B7729486A132'",
             "result": {
               "status": "passed",
-              "duration": 1274000000
+              "duration": 1268000000
             }
           },
           {
@@ -800,7 +800,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 173000000
+              "duration": 182000000
             }
           },
           {
@@ -810,7 +810,7 @@
             "name": "I dont get any errors",
             "result": {
               "status": "passed",
-              "duration": 5044000000
+              "duration": 5053000000
             }
           }
         ]
@@ -839,7 +839,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3530000000
+              "duration": 6871000000
             }
           },
           {
@@ -859,7 +859,7 @@
             "name": "I select from the dropdown the option 'Device Group GUID'",
             "result": {
               "status": "passed",
-              "duration": 192000000
+              "duration": 214000000
             }
           },
           {
@@ -869,7 +869,7 @@
             "name": "I enter a filter '44EC722696F64D1BB2306BC8DCBAD6AE'",
             "result": {
               "status": "passed",
-              "duration": 1287000000
+              "duration": 1275000000
             }
           },
           {
@@ -879,7 +879,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 193000000
+              "duration": 167000000
             }
           },
           {
@@ -889,7 +889,7 @@
             "name": "I dont get any errors",
             "result": {
               "status": "passed",
-              "duration": 5051000000
+              "duration": 5046000000
             }
           }
         ]
@@ -918,7 +918,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3921000000
+              "duration": 6989000000
             }
           },
           {
@@ -928,7 +928,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 19000000
+              "duration": 31000000
             }
           },
           {
@@ -938,7 +938,7 @@
             "name": "I select from the dropdown the option 'Business GUID'",
             "result": {
               "status": "passed",
-              "duration": 226000000
+              "duration": 292000000
             }
           },
           {
@@ -948,7 +948,7 @@
             "name": "I enter a filter '617911432F274CE496CBC1E4DC3535A1'",
             "result": {
               "status": "passed",
-              "duration": 1284000000
+              "duration": 1321000000
             }
           },
           {
@@ -958,7 +958,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 184000000
+              "duration": 270000000
             }
           },
           {
@@ -968,7 +968,7 @@
             "name": "I see an error message 'Business account not found'",
             "result": {
               "status": "failed",
-              "duration": 25061000000,
+              "duration": 25088000000,
               "error_message": "AssertionError: Timed out retrying after 25000ms: Expected to find content: 'Business account not found' but never did.\n    at Function.ValidateErrorMessageSays (https://support-tools.dev.omnitracsone.com/__cypress/tests?p=cypress\\integration\\NavBar.feature:106:26)\n    at Context.eval (https://support-tools.dev.omnitracsone.com/__cypress/tests?p=cypress\\integration\\NavBar.feature:203:26)\n    at Context.resolveAndRunStepDefinition (https://support-tools.dev.omnitracsone.com/__cypress/tests?p=cypress\\integration\\NavBar.feature:10742:9)\n    at Context.eval (https://support-tools.dev.omnitracsone.com/__cypress/tests?p=cypress\\integration\\NavBar.feature:10084:35)"
             }
           }
@@ -998,7 +998,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3587000000
+              "duration": 6259000000
             }
           },
           {
@@ -1008,7 +1008,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 23000000
+              "duration": 31000000
             }
           },
           {
@@ -1018,7 +1018,7 @@
             "name": "I select from the dropdown the option 'Business GUID'",
             "result": {
               "status": "passed",
-              "duration": 248000000
+              "duration": 307000000
             }
           },
           {
@@ -1028,7 +1028,7 @@
             "name": "I enter a filter 'BEB84C8EB9761B63E0437A01EC0A305'",
             "result": {
               "status": "passed",
-              "duration": 1248000000
+              "duration": 1319000000
             }
           },
           {
@@ -1038,7 +1038,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 165000000
+              "duration": 216000000
             }
           },
           {
@@ -1048,7 +1048,7 @@
             "name": "I see an error message 'The id has an invalid format'",
             "result": {
               "status": "passed",
-              "duration": 33000000
+              "duration": 44000000
             }
           }
         ]
@@ -1077,7 +1077,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 5697000000
+              "duration": 5208000000
             }
           },
           {
@@ -1087,7 +1087,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 33000000
             }
           },
           {
@@ -1097,7 +1097,7 @@
             "name": "I select from the dropdown the option 'Device Group GUID'",
             "result": {
               "status": "passed",
-              "duration": 263000000
+              "duration": 301000000
             }
           },
           {
@@ -1107,7 +1107,7 @@
             "name": "I enter a filter 'E8A4EFFE362C4604BF9155555486A132'",
             "result": {
               "status": "passed",
-              "duration": 1278000000
+              "duration": 1353000000
             }
           },
           {
@@ -1117,7 +1117,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 189000000
+              "duration": 245000000
             }
           },
           {
@@ -1127,7 +1127,7 @@
             "name": "I see an error message 'Device group not found'",
             "result": {
               "status": "passed",
-              "duration": 1685000000
+              "duration": 1710000000
             }
           }
         ]
@@ -1156,7 +1156,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 5851000000
+              "duration": 3986000000
             }
           },
           {
@@ -1166,7 +1166,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 25000000
+              "duration": 34000000
             }
           },
           {
@@ -1176,7 +1176,7 @@
             "name": "I select from the dropdown the option 'Device Group GUID'",
             "result": {
               "status": "passed",
-              "duration": 224000000
+              "duration": 333000000
             }
           },
           {
@@ -1186,7 +1186,7 @@
             "name": "I enter a filter '44EC722696F64D1BB23012345CBAD6A'",
             "result": {
               "status": "passed",
-              "duration": 1278000000
+              "duration": 1302000000
             }
           },
           {
@@ -1196,7 +1196,7 @@
             "name": "I click on search",
             "result": {
               "status": "passed",
-              "duration": 186000000
+              "duration": 200000000
             }
           },
           {
@@ -1206,7 +1206,7 @@
             "name": "I see an error message 'The id has an invalid format'",
             "result": {
               "status": "passed",
-              "duration": 30000000
+              "duration": 40000000
             }
           }
         ]

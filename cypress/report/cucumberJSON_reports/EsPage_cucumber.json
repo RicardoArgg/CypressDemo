@@ -31,7 +31,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 29167000000
+              "duration": 39435000000
             }
           },
           {
@@ -41,7 +41,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 20000000
             }
           },
           {
@@ -89,7 +89,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 7297000000
+              "duration": 11425000000
             }
           },
           {
@@ -99,7 +99,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 20000000
+              "duration": 19000000
             }
           },
           {
@@ -109,7 +109,7 @@
             "name": "I click the 'ES' tab",
             "result": {
               "status": "undefined",
-              "duration": 4000000
+              "duration": 5000000
             }
           },
           {
@@ -165,7 +165,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4589000000
+              "duration": 11962000000
             }
           },
           {
@@ -175,7 +175,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 26000000
+              "duration": 22000000
             }
           },
           {
@@ -185,7 +185,7 @@
             "name": "I click the 'ES' tab",
             "result": {
               "status": "undefined",
-              "duration": 6000000
+              "duration": 3000000
             }
           },
           {
@@ -241,7 +241,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 3591000000
+              "duration": 4288000000
             }
           },
           {
@@ -251,7 +251,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 27000000
+              "duration": 26000000
             }
           },
           {
@@ -317,7 +317,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 5381000000
+              "duration": 7515000000
             }
           },
           {
@@ -327,7 +327,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 32000000
+              "duration": 29000000
             }
           },
           {
@@ -337,7 +337,7 @@
             "name": "I click the 'ES' tab",
             "result": {
               "status": "undefined",
-              "duration": 3000000
+              "duration": 5000000
             }
           },
           {
@@ -393,7 +393,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 6586000000
+              "duration": 7226000000
             }
           },
           {
@@ -403,7 +403,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 34000000
+              "duration": 31000000
             }
           },
           {
@@ -413,7 +413,7 @@
             "name": "I click the 'ES' tab",
             "result": {
               "status": "undefined",
-              "duration": 3000000
+              "duration": 4000000
             }
           },
           {
@@ -469,7 +469,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 5128000000
+              "duration": 5936000000
             }
           },
           {
@@ -545,7 +545,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4511000000
+              "duration": 7449000000
             }
           },
           {

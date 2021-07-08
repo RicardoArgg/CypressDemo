@@ -31,7 +31,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 9060000000
+              "duration": 10017000000
             }
           },
           {
@@ -41,7 +41,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 18000000
+              "duration": 21000000
             }
           },
           {
@@ -51,7 +51,7 @@
             "name": "I click the Omnitracs One tab",
             "result": {
               "status": "passed",
-              "duration": 109000000
+              "duration": 124000000
             }
           },
           {
@@ -61,7 +61,7 @@
             "name": "I validate '7' cards are displayed",
             "result": {
               "status": "passed",
-              "duration": 776000000
+              "duration": 846000000
             }
           },
           {
@@ -71,7 +71,7 @@
             "name": "I see 'Tracker' card on screen",
             "result": {
               "status": "passed",
-              "duration": 1057000000
+              "duration": 1056000000
             }
           },
           {
@@ -81,7 +81,7 @@
             "name": "I validate the 'Tracker' card contains a link",
             "result": {
               "status": "passed",
-              "duration": 87000000
+              "duration": 89000000
             }
           },
           {
@@ -91,7 +91,7 @@
             "name": "I Validate the response code of the website is 200",
             "result": {
               "status": "passed",
-              "duration": 3756000000
+              "duration": 4587000000
             }
           }
         ]
@@ -120,7 +120,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4001000000
+              "duration": 7078000000
             }
           },
           {
@@ -130,7 +130,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 15000000
             }
           },
           {
@@ -140,7 +140,7 @@
             "name": "I click the Omnitracs One tab",
             "result": {
               "status": "passed",
-              "duration": 104000000
+              "duration": 106000000
             }
           },
           {
@@ -150,7 +150,7 @@
             "name": "I validate '7' cards are displayed",
             "result": {
               "status": "passed",
-              "duration": 784000000
+              "duration": 874000000
             }
           },
           {
@@ -160,7 +160,7 @@
             "name": "I see 'GOM' card on screen",
             "result": {
               "status": "passed",
-              "duration": 1027000000
+              "duration": 1049000000
             }
           },
           {
@@ -170,7 +170,7 @@
             "name": "I validate the 'GOM' card contains a link",
             "result": {
               "status": "passed",
-              "duration": 86000000
+              "duration": 78000000
             }
           },
           {
@@ -180,7 +180,7 @@
             "name": "I Validate the response code of the website is 401",
             "result": {
               "status": "passed",
-              "duration": 1092000000
+              "duration": 1231000000
             }
           }
         ]
@@ -209,7 +209,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 5398000000
+              "duration": 7996000000
             }
           },
           {
@@ -219,7 +219,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 15000000
+              "duration": 13000000
             }
           },
           {
@@ -229,7 +229,7 @@
             "name": "I click the Omnitracs One tab",
             "result": {
               "status": "passed",
-              "duration": 105000000
+              "duration": 112000000
             }
           },
           {
@@ -239,7 +239,7 @@
             "name": "I validate '7' cards are displayed",
             "result": {
               "status": "passed",
-              "duration": 780000000
+              "duration": 857000000
             }
           },
           {
@@ -249,7 +249,7 @@
             "name": "I see 'Vehicle data source' card on screen",
             "result": {
               "status": "passed",
-              "duration": 1052000000
+              "duration": 1030000000
             }
           },
           {
@@ -259,7 +259,7 @@
             "name": "I validate the 'Vehicle data source' card contains a link",
             "result": {
               "status": "passed",
-              "duration": 76000000
+              "duration": 88000000
             }
           },
           {
@@ -269,7 +269,7 @@
             "name": "I Validate the response code of the website is 401",
             "result": {
               "status": "passed",
-              "duration": 215000000
+              "duration": 248000000
             }
           }
         ]
@@ -298,7 +298,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4291000000
+              "duration": 6626000000
             }
           },
           {
@@ -308,7 +308,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 13000000
+              "duration": 17000000
             }
           },
           {
@@ -318,7 +318,7 @@
             "name": "I click the Omnitracs One tab",
             "result": {
               "status": "passed",
-              "duration": 124000000
+              "duration": 121000000
             }
           },
           {
@@ -328,7 +328,7 @@
             "name": "I validate '7' cards are displayed",
             "result": {
               "status": "passed",
-              "duration": 1438000000
+              "duration": 846000000
             }
           },
           {
@@ -338,7 +338,7 @@
             "name": "I see 'GOM Bluetooth/WiFi' card on screen",
             "result": {
               "status": "passed",
-              "duration": 1048000000
+              "duration": 1045000000
             }
           },
           {
@@ -348,7 +348,7 @@
             "name": "I validate the 'GOM Bluetooth/WiFi' card contains a link",
             "result": {
               "status": "passed",
-              "duration": 78000000
+              "duration": 74000000
             }
           },
           {
@@ -358,7 +358,7 @@
             "name": "I Validate the response code of the website is 401",
             "result": {
               "status": "passed",
-              "duration": 1142000000
+              "duration": 1128000000
             }
           }
         ]
@@ -387,7 +387,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 4920000000
+              "duration": 5688000000
             }
           },
           {
@@ -397,7 +397,7 @@
             "name": "I Validate the support tools portal is loaded",
             "result": {
               "status": "passed",
-              "duration": 11000000
+              "duration": 12000000
             }
           },
           {
@@ -407,7 +407,7 @@
             "name": "I click the Omnitracs One tab",
             "result": {
               "status": "passed",
-              "duration": 106000000
+              "duration": 122000000
             }
           },
           {
@@ -417,7 +417,7 @@
             "name": "I validate '7' cards are displayed",
             "result": {
               "status": "passed",
-              "duration": 863000000
+              "duration": 838000000
             }
           },
           {
@@ -427,7 +427,7 @@
             "name": "I see 'CDS' card on screen",
             "result": {
               "status": "passed",
-              "duration": 1057000000
+              "duration": 1062000000
             }
           },
           {
@@ -437,7 +437,7 @@
             "name": "I validate the 'CDS' card contains a link",
             "result": {
               "status": "passed",
-              "duration": 74000000
+              "duration": 73000000
             }
           },
           {
@@ -447,7 +447,7 @@
             "name": "I Validate the response code of the website is 401",
             "result": {
               "status": "passed",
-              "duration": 243000000
+              "duration": 272000000
             }
           }
         ]
@@ -476,7 +476,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 5336000000
+              "duration": 5764000000
             }
           },
           {
@@ -496,7 +496,7 @@
             "name": "I click the Omnitracs One tab",
             "result": {
               "status": "passed",
-              "duration": 107000000
+              "duration": 102000000
             }
           },
           {
@@ -506,7 +506,7 @@
             "name": "I validate '7' cards are displayed",
             "result": {
               "status": "passed",
-              "duration": 835000000
+              "duration": 873000000
             }
           },
           {
@@ -516,7 +516,7 @@
             "name": "I see 'Looker Tool' card on screen",
             "result": {
               "status": "passed",
-              "duration": 1047000000
+              "duration": 1048000000
             }
           },
           {
@@ -526,7 +526,7 @@
             "name": "I validate the 'Looker Tool' card contains a link",
             "result": {
               "status": "passed",
-              "duration": 75000000
+              "duration": 80000000
             }
           },
           {
@@ -536,7 +536,7 @@
             "name": "I Validate the response code of the website is 200",
             "result": {
               "status": "passed",
-              "duration": 1247000000
+              "duration": 1266000000
             }
           }
         ]
@@ -565,7 +565,7 @@
             "name": "I log in",
             "result": {
               "status": "passed",
-              "duration": 6731000000
+              "duration": 5107000000
             }
           },
           {
@@ -585,7 +585,7 @@
             "name": "I click the Omnitracs One tab",
             "result": {
               "status": "passed",
-              "duration": 110000000
+              "duration": 103000000
             }
           },
           {
@@ -595,7 +595,7 @@
             "name": "I validate '7' cards are displayed",
             "result": {
               "status": "passed",
-              "duration": 861000000
+              "duration": 850000000
             }
           },
           {
@@ -605,7 +605,7 @@
             "name": "I see 'Status Dashboard' card on screen",
             "result": {
               "status": "passed",
-              "duration": 1046000000
+              "duration": 1029000000
             }
           },
           {
@@ -615,7 +615,7 @@
             "name": "I validate the 'Status Dashboard' card contains a link",
             "result": {
               "status": "passed",
-              "duration": 70000000
+              "duration": 72000000
             }
           },
           {
@@ -625,7 +625,7 @@
             "name": "I Validate the response code of the website is 200",
             "result": {
               "status": "passed",
-              "duration": 1421000000
+              "duration": 1427000000
             }
           }
         ]
