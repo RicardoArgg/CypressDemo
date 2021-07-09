@@ -4,15 +4,13 @@ import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import NavBar from '../NavBar/NavBarPage';
 import OmniOne from '../OmniOne/OmniOnePage';
 
-var url = null;
-
 Given("I log in", function () {
-    cy.visit('home')
+    cy.visitHome()
     cy.login()
 })
 
 Then("I Validate the support tools portal is loaded", () => {
-    cy.validateSupportToolsHeader()
+    cy.validateSupportTools()
 })
 
 Given("I click the Omnitracs One tab", () => {

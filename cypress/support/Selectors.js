@@ -1,6 +1,5 @@
 /// <reference types="Cypress" />
 
-
 class Selectors {
 
     static navBar(webElement) {
@@ -15,6 +14,7 @@ class Selectors {
             case 'ES tab':                  return cy.get('a[href="/es"]');
             case 'Omnitracs One tab':       return cy.get('a[href="/omnitracsone"]');
             case 'DeviceInfoElements':      return cy.get('div.div-info');
+            case 'pieCanvas':               return cy.get('div > canvas');
         }
     }
 
@@ -25,5 +25,27 @@ class Selectors {
             case 'cardUrl':             return cy.get('div.card-footer>a');
         }
     }
+
+    static loginSso(webElement) {
+        switch (webElement) {
+            case 'userInput':           return cy.get('input#identifierInput');
+            case 'passInput':           return cy.get('input#password-field');
+            case 'submitUserButton':    return cy.get('div#postButton>a');
+            case 'submitCredButton':    return cy.get('a[onclick="postOk();"]');
+            case 'WaitLogin':           return cy.get('#header', { timeout: 15000 });
+        }
+    }
+
+    static loginOne(webElement) {
+        switch (webElement) {
+            case 'userInput':           return cy.get('input[name="user-id"]');
+            case 'submitUserButton':    return cy.get('button[type="submit"]');
+            case 'userValidation':      return cy.get('span[class="display-flex break-word-anywhere"]');
+            case 'passInput':           return cy.get('input[name="password"]')
+            case 'submitCredButton':    return cy.get('button[type="submit"]');
+            case 'WaitLogin':           return cy.get('.left-pan-input', { timeout: 10000 });
+        }
+    }
+
 }
 export default Selectors;

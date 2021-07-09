@@ -4,12 +4,12 @@ import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import NavBar from './NavBarPage';
 
 Given("I log in", function () {
-    cy.visit('home')
+    cy.visitHome()
     cy.login()
-    cy.get('div > canvas')
 })
+
 Then("I Validate the support tools portal is loaded", function () {
-    cy.validateSupportToolsHeader()
+    cy.validateSupportTools()
 })
 
 Then("I see results displayed", function () {

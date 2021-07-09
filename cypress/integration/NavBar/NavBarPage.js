@@ -38,7 +38,7 @@ class NavBar {
         // cy.get('st-device').find('div')
         //.find('span').should('not.exist');
         // cy.get('st-device > div > span').should('not.exist');
-        cy.wait(5000)
+        cy.wait(7500)
         Selectors.navBar('inputErrorMessage')
             .should('not.exist');
         // cy.get('div[class="margin-text-validation"]')
@@ -58,11 +58,12 @@ class NavBar {
     }
 
     static ValidateColumnsOnPage(numberOfColumns) {
-        Selectors.EsPage('columnElements')
+        Selectors.esPage('columnElements')
             .should('have.length', numberOfColumns)
     }
 
     static ClickTabByText(tabText) {
+        cy.wait(3000)
         Selectors.navBar(tabText + ' tab').click()
     }
 

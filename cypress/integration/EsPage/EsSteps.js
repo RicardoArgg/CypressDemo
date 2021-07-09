@@ -5,16 +5,16 @@ import NavBar from '../NavBar/NavBarPage';
 import EsPage from './EsPage';
 
 Given("I log in", function () {
-    cy.visit('home')
+    cy.visitHome()
     cy.login()
 })
 
 Then("I Validate the support tools portal is loaded", function () {
-    cy.validateSupportToolsHeader()
+    cy.validateSupportTools()
 })
 
-Given("I click the ES tab", function () {
-    NavBar.ClickTabByText('ES')
+Given("I click the {string} tab", function (tabText) {
+    NavBar.ClickTabByText(tabText)
 })
 
 Then("I validate {string} cards are displayed", function (cardNumber) {

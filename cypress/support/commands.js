@@ -9,66 +9,74 @@
 // ***********************************************
 //
 //
+import Selectors from './Selectors'
+
+
 Cypress.Commands.add('login', function () {
 
-   //cy.get("head>title", { timeout: 60000 }).should(($x) => {
+   // cy.get("head>title", { timeout: 60000 }).should(($x) => {
    //   expect($x).to.not.equal('Support Tools Portal');
-   //})
+   // })
    //cy.title().should('not.have.text','Support Tools Portal', {timeout: 10000})
-   cy.wait(2000)
-   cy.get("head").find('title').invoke('text').then((text) => {
-      switch (text) {
-         default:
-            cy.log("Executing OmnitracsOne Login...")
-            cy.validateNewLogin()
-            cy.loginNew()
-            break;
-         case 'Sign On':
-            cy.log("Executing Sign On Login...")
-            cy.validateLogin()
-            cy.loginSso()
-            break;
-         case 'Support Tools Portal':
-            cy.log("Executing Sign On Login...")
-            break;
+   //cy.wait(8000);
+   cy.get("body").then($body => {
+      if ($body.find("div>canvas").length > 0) {
+         cy.log("Already logged in...")
+      } else {
+         cy.log("Executing OmnitracsOne Login...")
+         cy.WaitOneLogin()
+         cy.loginOne()
       }
    });
-   cy.get('div>canvas')
+   //cy.validateSupportTools()
+});
+
+Cypress.Commands.add('visitHome', function () {
+   cy.visit('home')
+   cy.get('body').should('be.visible')
+   cy.wait(15000)
 })
 
 Cypress.Commands.add('loginSso', function () {
-   cy.log("Logging in printed from commands.js")
-   cy.get('input#identifierInput').type(Cypress.env('username'))
-   cy.get('div#postButton>a').click()
-   // cy.get('div#username-text').invoke("attr","class").should('not.contain', 'show')
-   cy.get('input#password-field').type(Cypress.env('password'), { log: false })
-   cy.get('a[onclick="postOk();"]').click()
+   Selectors.loginSso('userInput').type(Cypress.env('username'))
+   Selectors.loginSso('submitUserButton').click()
+   Selectors.loginSso('passInput').type(Cypress.env('password'), { log: false })
+   Selectors.loginSso('submitCredButton').click()
 })
 
-Cypress.Commands.add('loginNew', function () {
-   cy.log(Cypress.env('baseUrl'))
-   cy.get('input[name="user-id"]').type(Cypress.env('username'))
-   cy.get('button[type="submit"]').click()
-   // cy.get('div#username-text').invoke("attr","class").should('not.contain', 'show')
-   cy.get('span[class="display-flex break-word-anywhere"]').
-      should('have.text', Cypress.env('username'))
-   cy.get('input[name="password"]').type(Cypress.env('password'), { log: false })
-   cy.get('button[type="submit"]').click()
+Cypress.Commands.add('loginOne', function () {
+   cy.log("Executing OmnitracsOne Login...")
+   Selectors.loginOne('userInput').type(Cypress.env('username'))
+   Selectors.loginOne('submitUserButton').click()
+   Selectors.loginOne('userValidation').should('have.text', Cypress.env('username'))
+   Selectors.loginOne('passInput').type(Cypress.env('password'), { log: false })
+   Selectors.loginOne('submitCredButton').click()
 })
 
-Cypress.Commands.add('validateSupportToolsHeader', function () {
-   cy.log("Validating logo is displayed in Support tools home")
-   cy.get('button#sideBarButton').should('be.visible')
+Cypress.Commands.add('validateSupportTools', function () {
+   cy.log("Validating canvas from home is loaded")
+   Selectors.navBar('pieCanvas').should('be.visible')
 })
 
-Cypress.Commands.add('validateLogin', function () {
+Cypress.Commands.add('newUrl', function () {
+   cy.on('url:changed',  (newUrl)  => {
+      cy.log("New URL:  %%%%%%%%%%  " + newUrl)
+      if (newUrl.includes('login.dev.omnitracsone.com/#/checkuser')) {
+        cy.log("Login IN  EVENT %%%%%%%%%%%%%%%%%%%%%%%%%%%  " + newUrl).then(()=>{
+           cy.loginOne()
+        })
+      }
+   });
+})
+
+Cypress.Commands.add('WaitSsoLogin', function () {
    cy.log("Waiting for the Omnitracs logo to load")
-   cy.get('#header', { timeout: 15000 }).should('be.visible')
+   Selectors.loginSso('WaitLogin').should('be.visible')
 })
 
-Cypress.Commands.add('validateNewLogin', function () {
-   cy.log("Waiting for the Omnitracs logo to load")
-   cy.get('app-root>app-login-process', { timeout: 1000 }).should('be.visible')
+Cypress.Commands.add('WaitOneLogin', function () {
+   cy.log("Waiting for the Omnitracs New login element to load")
+   Selectors.loginOne('WaitLogin').should('be.visible')
 })
 
 //

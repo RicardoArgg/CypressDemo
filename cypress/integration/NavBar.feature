@@ -6,12 +6,12 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
 
     @TC-ID001 @GeniusBar
     Scenario: Go to ES tab and validate
-        Given I click the ES tab
+        Given I click the 'ES' tab
         Then I validate the ES page
 
     @TC-ID002 @GeniusBar
     Scenario: Go to Omnitracs One tab and validate
-        Given I click the Omnitracs One tab
+        Given I click the 'Omnitracs One' tab
         Then I validate the Omnitracs One page
 
     @TC-ID003 @GeniusBar
@@ -70,7 +70,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
 
         Examples:
             | option            | filter                           | message                      |
-            | Business GUID     | 617911432F274CE496CBC1E4DC3535A1 | Business account not found   |
+            | Business GUID     | 617911432F274CE496CBC1E4DC0005A1 | Business account not found   |
             | Business GUID     | BEB84C8EB9761B63E0437A01EC0A305  | The id has an invalid format |
             | Device Group GUID | E8A4EFFE362C4604BF9155555486A132 | Device group not found       |
             | Device Group GUID | 44EC722696F64D1BB23012345CBAD6A  | The id has an invalid format |

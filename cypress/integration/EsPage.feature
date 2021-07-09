@@ -17,11 +17,11 @@ Feature: Support Tools Portal testing Demo - ES page feature
         And I validate the link in '<card-title>' is equals as '<url>'
 
         Examples:
-            | card-title          | url                                       |
-            | Tracker             | https://intgapp.omnitracs.com/hupsuiWeb/  |
-            | GOM                 | https://intgapp.omnitracs.com/icsuiWeb    |
-            | Vehicle data source | https://intgapp.omnitracs.com/salesEARWeb |
-            | GOM Bluetooth/WiFi  | https://intgapp.omnitracs.com/opsuiWeb    |
-            | CDS                 | https://ocid.omnitracs.com                |
-            | Looker Tool         | https://provhub.omnitracs.com             |
-            | Status Dashboard    | https://customer.omnitracs.com/system/#!/ |
+            | card-title | url                                          |
+            | HUPS       | https://intgapp.omnitracs.com/hupsuiWeb/     |
+            | ICS        | https://intgapp.omnitracs.com/icsuiWeb       |
+            | Sales EAR  | https://intgapp.omnitracs.com/salesEARWeb    |
+            | OPS        | https://intgapp.omnitracs.com/opsuiWeb       |
+            | OCID       | https://ocid.omnitracs.com                   |
+            | PH         | https://provhub.omnitracs.com                |
+            | Metadmin   | https://customer.omnitracs.com/system/#!/    |
