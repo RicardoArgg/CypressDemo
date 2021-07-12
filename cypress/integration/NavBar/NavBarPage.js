@@ -76,6 +76,11 @@ class NavBar {
         Selectors.navBar('DeviceInfoElements')
             .should('not.exist')
     }
+
+    static ValidateBusinessGuidIsNotEmpty() {
+        Selectors.navBar('DeviceGuidResult')
+            .should('not.have.text', '')
+    }
 }
 
 export default NavBar;

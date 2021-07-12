@@ -77,3 +77,6 @@ And("I validate the link in {string} is equals as {string}", (cardText, url) => 
     NavBar.ValidateCardUrl(cardText, url)
 })
 
+And("I see business GUID", () => {
+    NavBar.ValidateBusinessGuidIsNotEmpty()
+})

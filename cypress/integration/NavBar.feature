@@ -53,10 +53,11 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         And I enter a filter '<filter>'
         And I click on search
         Then I dont get any errors
+        And I see business GUID
 
         Examples:
             | option            | filter                           |
-            | Business GUID     | 617911432F274CE496CBC1E4DC3535A1 |
+           #| Business GUID     | 617911432F274CE496CBC1E4DC3535A1 |
             | Business GUID     | BEB84C8EB9761B63E0437A01EC0A3055 |
             | Device Group GUID | E8A4EFFE362C4604BF91B7729486A132 |
             | Device Group GUID | 44EC722696F64D1BB2306BC8DCBAD6AE |
