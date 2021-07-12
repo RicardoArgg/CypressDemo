@@ -3,3 +3,4 @@ cypress/videos/
 screenshots/
 cypress/report/mochawesome_reports
 cypress/report/cucumberJSON_reports
+cypress/report/final-report
