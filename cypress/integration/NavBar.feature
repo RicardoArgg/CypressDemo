@@ -19,19 +19,21 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         Given I click on search
         Then I get an error about the required field
 
-    @TC-ID004 @GeniusBar
+    @TC-ID004 @GeniusBar @only
     Scenario Outline: Valid results searching by Device Id are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
         And I click the radio option for '<enviroment>'
         And I click on search
         Then I dont get any errors
-        And I see results displayed
+        And I see Device Id '<filter>' as serial number in the results
 
         Examples:
             | option    | filter    | enviroment |
             | Device Id | 170001031 | Prod       |
             | Device Id | 170001029 | Prod       |
+            | Device Id | 170001031 | UAT        |
+            | Device Id | 170001029 | UAT        |
 
     @TC-ID004 @GeniusBar
     Scenario Outline: Invalid results searching by Device Id
@@ -46,24 +48,37 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | option    | filter    | enviroment |
             | Device Id | 170012345 | Prod       |
             | Device Id | 990001029 | Prod       |
+            | Device Id | 170012345 | UAT        |
+            | Device Id | 990001029 | UAT        |
 
-    @TC-ID004 @GeniusBar
-    Scenario Outline: Valid results searching by Business GUID and Device Group are displayed
+    @TC-ID004 @GeniusBar 
+    Scenario Outline: Valid results searching by Business GUID are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
         And I click on search
         Then I dont get any errors
-        And I see business GUID
+        And I see Business GUID '<filter>' in the results
+
+        Examples:
+            | option        | filter                           |
+           #| Business GUID | 617911432F274CE496CBC1E4DC3535A1 |
+            | Business GUID | BEB84C8EB9761B63E0437A01EC0A3055 |
+ 
+    @TC-ID004 @GeniusBar
+    Scenario Outline: Valid results searching by Business Group GUID are displayed
+        Given I select from the dropdown the option '<option>'
+        And I enter a filter '<filter>'
+        And I click on search
+        Then I dont get any errors
+        And I see Business Group GUID '<filter>' in the results
 
         Examples:
             | option            | filter                           |
-           #| Business GUID     | 617911432F274CE496CBC1E4DC3535A1 |
-            | Business GUID     | BEB84C8EB9761B63E0437A01EC0A3055 |
             | Device Group GUID | E8A4EFFE362C4604BF91B7729486A132 |
             | Device Group GUID | 44EC722696F64D1BB2306BC8DCBAD6AE |
 
     @TC-ID004 @GeniusBar
-    Scenario Outline: Invalid results searching by Business GUID and Device Group are displayed
+    Scenario Outline: Invalid results searching by Device Group are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
         And I click on search

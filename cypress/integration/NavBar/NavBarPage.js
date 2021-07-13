@@ -78,8 +78,23 @@ class NavBar {
     }
 
     static ValidateBusinessGuidIsNotEmpty() {
-        Selectors.navBar('DeviceGuidResult')
+        Selectors.navBar('businessGuidResult').first().next()
             .should('not.have.text', '')
+    }
+
+    static ValidateBusinessGuidIs(businessGuid) {
+        Selectors.navBar('businessGuidResult').eq(1)
+            .should('have.text', businessGuid)
+    }
+
+    static ValidateBusinessGroupGuidIs(groupGuid) {
+        Selectors.navBar('businessGuidResult').first()
+            .should('have.text', groupGuid)
+    }
+
+    static ValidateDeviceIdIs(deviceId) {
+        Selectors.navBar('resultsData').eq(4)
+            .should('contains.text', deviceId)
     }
 }
 

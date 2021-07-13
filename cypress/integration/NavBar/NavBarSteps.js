@@ -77,6 +77,14 @@ And("I validate the link in {string} is equals as {string}", (cardText, url) => 
     NavBar.ValidateCardUrl(cardText, url)
 })
 
-And("I see business GUID", () => {
-    NavBar.ValidateBusinessGuidIsNotEmpty()
+And("I see Business GUID {string} in the results", (businessGuid) => {
+    NavBar.ValidateBusinessGuidIs(businessGuid)
+})
+
+And("I see Business Group GUID {string} in the results", (groupGuid) => {
+    NavBar.ValidateBusinessGroupGuidIs(groupGuid)
+})
+
+And("I see Device Id {string} as serial number in the results", (deviceId) => {
+    NavBar.ValidateDeviceIdIs(deviceId)
 })

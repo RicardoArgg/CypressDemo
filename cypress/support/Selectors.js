@@ -15,7 +15,9 @@ class Selectors {
             case 'Omnitracs One tab':       return cy.get('a[href="/omnitracsone"]');
             case 'DeviceInfoElements':      return cy.get('div.div-info');
             case 'pieCanvas':               return cy.get('div > canvas');
-            case 'DeviceGuidResult':        return cy.get('span.att-data').last();
+            case 'businessGuidResult':      return cy.get('span.att-data')
+            case 'resultsSections':         return cy.get('div.div-info')
+            case 'resultsData':             return cy.get('div.div-info span.att-data')
         }
     }
 

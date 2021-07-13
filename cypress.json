@@ -8,7 +8,7 @@
   "viewportHeight": 720,
   "reporter": "mochawesome",
   "video": false,
-  "screenshotOnRunFailure": false,
+  "screenshotOnRunFailure": true,
   "reporterOptions": {
     "reportFilename": "automated-execution",
     "files": "cypress/report/mochawesome_reports/*.json",
@@ -19,7 +19,7 @@
     "timestamp": "yyyymmdd_HHMMss"
   },
   "env": {
-    "TAGS": "",
+    "TAGS": "@only",
     "username": "omnioneadmin@patronweb.net",
     "password": "Omnitracs17!"
   }
