@@ -1,13 +1,9 @@
 /// <reference types="Cypress" />
-import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
+import { Given, When, And, Then, defineStep } from "cypress-cucumber-preprocessor/steps";
 
 import NavBar from './NavBarPage';
 
-Then("I see results displayed", function () {
-    NavBar.ValidateResultsDivs()
-})
-
-And("I see results displayed", function () {
+defineStep("I see results displayed", function () {
     NavBar.ValidateResultsDivs()
 })
 

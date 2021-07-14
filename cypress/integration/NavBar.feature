@@ -15,7 +15,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         Given I click the 'Omnitracs One' tab
         Then I validate the Omnitracs One page
 
-    # Refactor of the two first test cases as outline
+    # Refactor of the two first test cases
     @TC-ID003 @GeniusBar
     Scenario Outline: Validate tabs contains correct number of cards
         Given I click the '<tabName>' tab
