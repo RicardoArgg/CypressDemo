@@ -62,14 +62,14 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         And I click the radio option for '<enviroment>'
         And I click on search
         Then I dont get any errors
-        And I validate the MEID is as expected for the enviroment '<enviroment>'
+        And I validate the MEID is '<meid>' as expected
 
         Examples:
-            | filter    | enviroment |
-            | 170001031 | Prod       |
-            | 170001029 | Prod       |
-            | 170001031 | UAT        |
-            | 170001029 | UAT        |
+            | filter    | enviroment | meid             |
+            | 170001031 | Prod       | -                |
+            | 170001029 | Prod       | 356207071260880  |
+            | 170001031 | UAT        | 356207071333018  |
+            | 170001029 | UAT        | 356207071260880  |
 
     @TC-ID006 @GeniusBar @negative
     Scenario Outline: Invalid results searching by Device Id

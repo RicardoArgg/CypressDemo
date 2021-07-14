@@ -101,13 +101,14 @@ class NavBar {
             .should('contain', 'is-active')
     }
 
-    static ValidateMeidByEnv(env) {
+    static ValidateMeidByEnv(expected) {
         Selectors.navBar('resultsStrong').eq(3)
-            .invoke('text').then((txt)=>{
-                if (env=='Prod'){
+            .invoke('text').then((txt) => {
+                if (txt.includes('-')) {
                     expect(txt).to.be.equal(' - ')
-                }else if (env=='UAT'){
+                } else {
                     expect(txt).to.match(/([0-9]){15}/)
+                    expect(txt).to.be.equal(expected)
                 }
             })
     }

@@ -101,6 +101,6 @@ And("I see Device Id {string} as serial number in the results", (deviceId) => {
     NavBar.ValidateDeviceIdIs(deviceId)
 })
 
-And("I validate the MEID is as expected for the enviroment {string}", (enviroment) => {
+And("I validate the MEID is {string} as expected", (enviroment) => {
     NavBar.ValidateMeidByEnv(enviroment)
 })
