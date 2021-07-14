@@ -1,5 +1,11 @@
 /// <reference types="Cypress" />
 
+import NavBar from '../NavBar/NavBarPage';
+
+
+defineStep("I click the {string} tab", function (tabText) {
+    NavBar.ClickTabByText(tabText)
+})
 
 defineStep("I log in", function () {
     cy.visitHome(Cypress.env('homeTimeout'))

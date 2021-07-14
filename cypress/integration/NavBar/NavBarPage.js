@@ -112,6 +112,18 @@ class NavBar {
                 }
             })
     }
+
+    static ClickFilterInput() {
+        Selectors.navBar('searchTerm')
+            .should('be.visible').click()
+    }
+    
+    static ValidateRadiosAreStatus(status) {
+        Selectors.navBar('radioButtons').eq(0)
+            .should('be.' + status)
+        Selectors.navBar('radioButtons').eq(1)
+            .should('be.' + status)
+    }
 }
 
 export default NavBar;

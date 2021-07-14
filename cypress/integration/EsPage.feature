@@ -6,7 +6,7 @@ Feature: Support Tools Portal testing Demo - ES page feature
         And I visit home
 
     @TC-ID0021 @GeniusBar
-    Scenario: Go to ES tab and validate
+    Scenario: Go to ES tab and validate cards
         Given I click the 'ES' tab
         Then I validate '7' cards are displayed
 

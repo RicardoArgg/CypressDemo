@@ -11,10 +11,6 @@ Then("I dont see results displayed", function () {
     NavBar.ValidateThereAreNoResults()
 })
 
-Given("I click the {string} tab", function (tabText) {
-    NavBar.ClickTabByText(tabText)
-})
-
 Given("I validate the tab {string} was selected correctly", function (tabText) {
     NavBar.ValidateTabIsSelected(tabText)
 })
@@ -86,4 +82,16 @@ And("I see Device Id {string} as serial number in the results", (deviceId) => {
 
 And("I validate the MEID is {string} as expected", (enviroment) => {
     NavBar.ValidateMeidByEnv(enviroment)
+})
+
+And("I click on the filter", () => {
+    NavBar.ClickFilterInput()
+})
+
+Then("I see the filter {string} in the list", () => {
+    NavBar.ClickFilterInput()
+})
+
+Then("I see the SOTI enviroment options are {string}", (status) => {
+    NavBar.ValidateRadiosAreStatus(status)
 })

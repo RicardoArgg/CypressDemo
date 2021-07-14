@@ -1,13 +1,8 @@
 /// <reference types="Cypress" />
 import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 
-import NavBar from '../NavBar/NavBarPage';
 import EsPage from './EsPage';
 
-
-Given("I click the {string} tab", function (tabText) {
-    NavBar.ClickTabByText(tabText)
-})
 
 Then("I validate {string} cards are displayed", function (cardNumber) {
     EsPage.ValidateColumnsOnPage(cardNumber)
