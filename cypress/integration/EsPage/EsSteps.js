@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBarPage';
 import EsPage from './EsPage';
 
 Given("I log in", function () {
-    cy.visitHome()
+    cy.visitHome(Cypress.env('homeTimeout'))
     cy.login()
 })
 

@@ -5,21 +5,33 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         Then I Validate the support tools portal is loaded
 
     @TC-ID001 @GeniusBar
-    Scenario: Go to ES tab and validate
+    Scenario: Go to ES tab and validate cards
         Given I click the 'ES' tab
         Then I validate the ES page
 
     @TC-ID002 @GeniusBar
-    Scenario: Go to Omnitracs One tab and validate
+    Scenario: Go to Omnitracs One tab and validate cards
         Given I click the 'Omnitracs One' tab
         Then I validate the Omnitracs One page
 
-    @TC-ID003 @GeniusBar
+    # Refactor of the two first test cases as outline
+    @TC-ID003 @GeniusBar 
+    Scenario Outline: Validate
+        Given I click the '<tabName>' tab
+        Then I validate the tab '<tabName>' was selected correctly
+        And I validate that <items> cards are visible on page
+
+        Examples:
+            | tabName       | items |
+            | ES            | 7     |
+            | Omnitracs One | 7     |
+
+    @TC-ID004 @GeniusBar
     Scenario: Empty device search get an error
         Given I click on search
         Then I get an error about the required field
 
-    @TC-ID004 @GeniusBar @only
+    @TC-ID005 @GeniusBar @only
     Scenario Outline: Valid results searching by Device Id are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
@@ -35,7 +47,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Id | 170001031 | UAT        |
             | Device Id | 170001029 | UAT        |
 
-    @TC-ID004 @GeniusBar
+    @TC-ID006 @GeniusBar
     Scenario Outline: Invalid results searching by Device Id
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
@@ -51,7 +63,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Id | 170012345 | UAT        |
             | Device Id | 990001029 | UAT        |
 
-    @TC-ID004 @GeniusBar 
+    @TC-ID007 @GeniusBar 
     Scenario Outline: Valid results searching by Business GUID are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
@@ -64,7 +76,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
            #| Business GUID | 617911432F274CE496CBC1E4DC3535A1 |
             | Business GUID | BEB84C8EB9761B63E0437A01EC0A3055 |
  
-    @TC-ID004 @GeniusBar
+    @TC-ID008 @GeniusBar
     Scenario Outline: Valid results searching by Business Group GUID are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
@@ -77,7 +89,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Group GUID | E8A4EFFE362C4604BF91B7729486A132 |
             | Device Group GUID | 44EC722696F64D1BB2306BC8DCBAD6AE |
 
-    @TC-ID004 @GeniusBar
+    @TC-ID009 @GeniusBar
     Scenario Outline: Invalid results searching by Device Group are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'

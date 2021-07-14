@@ -19,8 +19,9 @@
     "timestamp": "yyyymmdd_HHMMss"
   },
   "env": {
-    "TAGS": "@only",
+    "TAGS": "",
     "username": "omnioneadmin@patronweb.net",
-    "password": "Omnitracs17!"
+    "password": "Omnitracs17!",
+    "homeTimeout": 15000
   }
 }

@@ -3,6 +3,7 @@ Feature: Support Tools Portal testing Demo - Omnitracs One page feature
     Background: Login to the Support Tools Portal
         Given I log in
         Then I Validate the support tools portal is loaded
+        And I visit home
 
     @TC-ID031 @GeniusBar
     Scenario Outline: Validate cards from Omnitracs One tab contains correct links

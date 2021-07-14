@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 
 
-beforeEach(function () {
+before(function () {
   //cy.newUrl()
+  //Cypress.env('homeTimeout', 15000)
 })

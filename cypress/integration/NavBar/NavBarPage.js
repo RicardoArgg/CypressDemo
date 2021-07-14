@@ -78,7 +78,8 @@ class NavBar {
     }
 
     static ValidateBusinessGuidIsNotEmpty() {
-        Selectors.navBar('businessGuidResult').first().next()
+        Selectors.navBar('businessGuidResult')
+            .first().next()
             .should('not.have.text', '')
     }
 
@@ -95,6 +96,13 @@ class NavBar {
     static ValidateDeviceIdIs(deviceId) {
         Selectors.navBar('resultsData').eq(4)
             .should('contains.text', deviceId)
+    }
+
+    static ValidateTabIsSelected(tabText) {
+        Selectors.navBar(tabText + ' tab')
+            .invoke('attr', 'class')
+            .should('contain', 'is-active')
+        //.should('have.class', 'is-active')
     }
 }
 

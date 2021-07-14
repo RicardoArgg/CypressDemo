@@ -24,6 +24,7 @@ Cypress.Commands.add('login', function () {
          cy.log("Already logged in...")
       } else {
          cy.log("Executing OmnitracsOne Login...")
+         Cypress.env('homeTimeout', 10000)
          cy.WaitOneLogin()
          cy.loginOne()
       }
@@ -31,10 +32,10 @@ Cypress.Commands.add('login', function () {
    //cy.validateSupportTools()
 });
 
-Cypress.Commands.add('visitHome', function () {
+Cypress.Commands.add('visitHome', function (timeOu) {
    cy.visit('home')
    cy.get('body').should('be.visible')
-   cy.wait(15000)
+   cy.wait(timeOu)
 })
 
 Cypress.Commands.add('loginSso', function () {
@@ -51,6 +52,7 @@ Cypress.Commands.add('loginOne', function () {
    Selectors.loginOne('userValidation').should('have.text', Cypress.env('username'))
    Selectors.loginOne('passInput').type(Cypress.env('password'), { log: false })
    Selectors.loginOne('submitCredButton').click()
+
 })
 
 Cypress.Commands.add('validateSupportTools', function () {
@@ -59,12 +61,12 @@ Cypress.Commands.add('validateSupportTools', function () {
 })
 
 Cypress.Commands.add('newUrl', function () {
-   cy.on('url:changed',  (newUrl)  => {
+   cy.on('url:changed', (newUrl) => {
       cy.log("New URL:  %%%%%%%%%%  " + newUrl)
       if (newUrl.includes('login.dev.omnitracsone.com/#/checkuser')) {
-        cy.log("Login IN  EVENT %%%%%%%%%%%%%%%%%%%%%%%%%%%  " + newUrl).then(()=>{
-           cy.loginOne()
-        })
+         cy.log("Login IN  EVENT %%%%%%%%%%%%%%%%%%%%%%%%%%%  " + newUrl).then(() => {
+            cy.loginOne()
+         })
       }
    });
 })

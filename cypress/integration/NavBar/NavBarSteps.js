@@ -4,8 +4,12 @@ import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import NavBar from './NavBarPage';
 
 Given("I log in", function () {
-    cy.visitHome()
+    cy.visitHome(Cypress.env('homeTimeout'))
     cy.login()
+})
+
+And("I visit home", function () {
+    cy.visitHome(Cypress.env('homeTimeout'))
 })
 
 Then("I Validate the support tools portal is loaded", function () {
@@ -26,6 +30,14 @@ Then("I dont see results displayed", function () {
 
 Given("I click the {string} tab", function (tabText) {
     NavBar.ClickTabByText(tabText)
+})
+
+Given("I validate the tab {string} was selected correctly", function (tabText) {
+    NavBar.ValidateTabIsSelected(tabText)
+})
+
+And("I validate that {int} cards are visible on page", function (cardsNumber) {
+    NavBar.ValidateColumnsOnPage(cardsNumber)
 })
 
 Then("I validate the ES page", function () {

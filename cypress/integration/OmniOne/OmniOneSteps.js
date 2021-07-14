@@ -5,7 +5,7 @@ import NavBar from '../NavBar/NavBarPage';
 import OmniOne from '../OmniOne/OmniOnePage';
 
 Given("I log in", function () {
-    cy.visitHome()
+    cy.visitHome(Cypress.env('homeTimeout'))
     cy.login()
 })
 
