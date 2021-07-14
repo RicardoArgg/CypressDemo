@@ -3,19 +3,6 @@ import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 
 import NavBar from './NavBarPage';
 
-Given("I log in", function () {
-    cy.visitHome(Cypress.env('homeTimeout'))
-    cy.login()
-})
-
-And("I visit home", function () {
-    cy.visitHome(Cypress.env('homeTimeout'))
-})
-
-Then("I Validate the support tools portal is loaded", function () {
-    cy.validateSupportTools()
-})
-
 Then("I see results displayed", function () {
     NavBar.ValidateResultsDivs()
 })

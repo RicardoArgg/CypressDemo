@@ -4,18 +4,6 @@ import { Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 import NavBar from '../NavBar/NavBarPage';
 import EsPage from './EsPage';
 
-Given("I log in", function () {
-    cy.visitHome(Cypress.env('homeTimeout'))
-    cy.login()
-})
-
-And("I visit home", function () {
-    cy.visitHome(Cypress.env('homeTimeout'))
-})
-
-Then("I Validate the support tools portal is loaded", function () {
-    cy.validateSupportTools()
-})
 
 Given("I click the {string} tab", function (tabText) {
     NavBar.ClickTabByText(tabText)
