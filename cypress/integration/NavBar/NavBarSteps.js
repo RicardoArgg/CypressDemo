@@ -100,3 +100,7 @@ And("I see Business Group GUID {string} in the results", (groupGuid) => {
 And("I see Device Id {string} as serial number in the results", (deviceId) => {
     NavBar.ValidateDeviceIdIs(deviceId)
 })
+
+And("I validate the MEID is as expected for the env {string}", (enviroment) => {
+    NavBar.ValidateMeidByEnv(enviroment)
+})

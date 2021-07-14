@@ -46,10 +46,7 @@ class NavBar {
     }
 
     static ValidateErrorMessageSays(error) {
-        cy.contains(error).should('be.visible') // *page contains
-        //cy.get('div[class="margin-text-validation"]').as('ele')
-        //cy.get('@ele').next().children()
-        //.should('contain.text', error)
+        cy.contains(error).should('be.visible')
     }
 
     static SelectRadioButton(radioText) {
@@ -102,7 +99,17 @@ class NavBar {
         Selectors.navBar(tabText + ' tab')
             .invoke('attr', 'class')
             .should('contain', 'is-active')
-        //.should('have.class', 'is-active')
+    }
+
+    static ValidateMeidByEnv(env) {
+        Selectors.navBar('resultsStrong').eq(3)
+            .invoke('attr', 'text').then((txt)=>{
+                if (env=='Prod'){
+                    expect(txt).to.be.equal(' - ')
+                }else if (env=='UAT'){
+                    expect(txt).to.match(/([0-9]){15}/)
+                }
+            })
     }
 }
 
