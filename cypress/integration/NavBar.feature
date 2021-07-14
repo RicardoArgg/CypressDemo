@@ -29,7 +29,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     @TC-ID004 @GeniusBar @negative
     Scenario Outline: Empty search error is displayed
         Given I select from the dropdown the option '<option>'
-        And click on search
+        And I click on search
         Then I get an error about the required field
 
         Examples:
