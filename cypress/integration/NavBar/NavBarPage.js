@@ -103,7 +103,7 @@ class NavBar {
 
     static ValidateMeidByEnv(env) {
         Selectors.navBar('resultsStrong').eq(3)
-            .invoke('attr', 'text').then((txt)=>{
+            .invoke('text').then((txt)=>{
                 if (env=='Prod'){
                     expect(txt).to.be.equal(' - ')
                 }else if (env=='UAT'){

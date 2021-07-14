@@ -3,6 +3,7 @@ Feature: Support Tools Portal testing Demo - ES page feature
     Background: Login to the Support Tools Portal
         Given I log in
         Then I Validate the support tools portal is loaded
+        And I visit home
 
     @TC-ID0021 @GeniusBar
     Scenario: Go to ES tab and validate

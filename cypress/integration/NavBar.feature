@@ -3,6 +3,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     Background: Login to the Support Tools Portal
         Given I log in
         Then I Validate the support tools portal is loaded
+        And I visit home
 
     @TC-ID001 @GeniusBar @deprecated
     Scenario: Go to ES tab and validate cards
@@ -54,7 +55,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Id | 170001031 | UAT        |
             | Device Id | 170001029 | UAT        |
 
-    @TC-ID006 @GeniusBar
+    @TC-ID006 @GeniusBar @only
     Scenario Outline: Validate business MEID for SOTI enviroments
         Given I select from the dropdown the option 'Device Id'
         And I enter a filter '<filter>'

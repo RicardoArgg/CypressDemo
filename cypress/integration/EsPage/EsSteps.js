@@ -9,6 +9,10 @@ Given("I log in", function () {
     cy.login()
 })
 
+And("I visit home", function () {
+    cy.visitHome(Cypress.env('homeTimeout'))
+})
+
 Then("I Validate the support tools portal is loaded", function () {
     cy.validateSupportTools()
 })
