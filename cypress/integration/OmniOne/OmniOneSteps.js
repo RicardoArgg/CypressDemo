@@ -18,5 +18,9 @@ And("I validate the {string} card contains a link", (cardText) => {
 })
 
 And("I Validate the response code of the website is {int}", (respCode) => {
-    OmniOne.GoToUrl(respCode)
+    OmniOne.GoToUrl(OmniOne.url, respCode)
+})
+
+And("I Validate the bellow codes are responses for each card link", (dataTable) => {
+    OmniOne.ValidateMultipleCodes(dataTable)
 })

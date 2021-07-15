@@ -3,6 +3,8 @@ import Selectors from '../../support/Selectors'
 
 class OmniOne {
 
+    allUrls = []
+
     static GetTextIndex() {
         cy.log(this.testIndex);
         return this.testIndex;
@@ -23,19 +25,33 @@ class OmniOne {
             .contains(cardText).parent().parent().next().find('a').as('link')
         cy.get('@link').should('have.attr', 'href')
         cy.get('@link').invoke('attr', 'href').then((href) => {
-            this.saveUrl(href)
+            this.SaveUrl(href)
         })
     }
 
-    static saveUrl(url) {
+    static SaveUrl(url) {
         this.url = url
     }
 
-    static GoToUrl(expectedCode) {
-        cy.log('Making an API request to ' + this.url)
-        cy.request({ "url": this.url, "failOnStatusCode": false }).then((resp) => {
+    static GoToUrl(url, expectedCode) {
+        cy.log('Making an API request to ' + url)
+        cy.request({ "url": url, "failOnStatusCode": false }).then((resp) => {
             expect(resp.status).to.eq(expectedCode)
         })
+    }
+
+    static ValidateMultipleCodes(datatable) {
+        cy.log('Making API requests with Data Tables data ' + this.url)
+        var table = datatable.rawTable.slice(1)
+        console.log("a, ", table)
+
+        datatable.hashes().forEach(elem => {
+            Selectors.esPage('cardTitle')
+                .contains(elem.card).parent().parent().next().find('a').as('link')
+            cy.get('@link').invoke('attr', 'href').then((href) => {
+                this.GoToUrl(href, parseInt(elem.response))
+            })
+        });
     }
 }
 

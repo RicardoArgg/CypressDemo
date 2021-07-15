@@ -11,6 +11,7 @@
 //
 import Selectors from './Selectors'
 
+let LOCAL_STORAGE_MEMORY = {};
 
 Cypress.Commands.add('login', function () {
 
@@ -80,6 +81,18 @@ Cypress.Commands.add('WaitOneLogin', function () {
    cy.log("Waiting for the Omnitracs New login element to load")
    Selectors.loginOne('WaitLogin').should('be.visible')
 })
+
+Cypress.Commands.add("saveLocalStorage", () => {
+  Object.keys(localStorage).forEach(key => {
+    LOCAL_STORAGE_MEMORY[key] = localStorage[key];
+  });
+});
+
+Cypress.Commands.add("restoreLocalStorage", () => {
+  Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
+    localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
+  });
+});
 
 //
 //
