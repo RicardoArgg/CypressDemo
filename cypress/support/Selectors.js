@@ -19,6 +19,7 @@ class Selectors {
             case 'resultsSections':         return cy.get('div.div-info')
             case 'resultsData':             return cy.get('div.div-info span.att-data')
             case 'resultsStrong':           return cy.get('span > strong')
+            case 'lastSearch':              return cy.get('#lastSearchesList')
         }
     }
 

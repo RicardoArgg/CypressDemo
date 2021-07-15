@@ -1,6 +1,9 @@
 Feature: Support Tools Portal testing Demo - Navigation Bar feature
+    This test suite tests the Navigation Bar from Support tools portal
 
     Background: Login to the Support Tools Portal
+        This steps are executed before each scenario, we use them to
+        login the user and open the 'support tools page'
         Given I log in
         Then I Validate the support tools portal is loaded
         And I visit home
@@ -17,7 +20,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
 
     # Refactor of the two first test cases
     @TC-ID003 @GeniusBar
-    Scenario Outline: Validate tabs contains correct number of cards
+    Scenario Outline: Validate '<tabName>' tab contains <items> item cards
         Given I click the '<tabName>' tab
         Then I validate the tab '<tabName>' was selected correctly
         And I validate that <items> cards are visible on page
@@ -28,7 +31,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Omnitracs One | 7     |
 
     @TC-ID004 @GeniusBar @negative
-    Scenario Outline: Empty search error is displayed when filter is empty
+    Scenario Outline: Empty search error is displayed when filter is empty searching by '<option>'
         Given I select from the dropdown the option '<option>'
         And I click on search
         Then I get an error about the required field
@@ -67,7 +70,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | 170001031 | UAT        |
             | 170001029 | UAT        |
 
-    @TC-ID007 @GeniusBar @only
+    @TC-ID007 @GeniusBar
     Scenario Outline: Validate business MEID for SOTI enviroments with valid devices
         Given I select from the dropdown the option 'Device Id'
         And I enter a filter '<filter>'
@@ -152,7 +155,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | 423E3F9132E8A414365A55486A1E2C4B |
 
     @TC-ID013 @GeniusBar @negative
-    Scenario Outline: Get an error about the invalid filter format
+    Scenario Outline: Get an error about the invalid filter format when we search <filter> by '<option>'
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
         And I click on search
@@ -171,7 +174,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Group GUID | BEB84C8EB9761B63E0437A01EC0A305A1S2 |
 
     @TC-ID014 @GeniusBar
-    Scenario Outline: Last searched items are listed in the filter dropdown
+    Scenario Outline: <last-filters> is displayed in the history dropdown searching by '<option>'
         Given I select from the dropdown the option '<option>'
         And I click on the filter
         Then I see the filter '<last-filters>' in the list

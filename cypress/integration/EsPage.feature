@@ -1,4 +1,6 @@
 Feature: Support Tools Portal testing Demo - ES page feature
+    This test suite tests the ES page from Support tools portal
+
 
     Background: Login to the Support Tools Portal
         Given I log in

@@ -88,8 +88,8 @@ And("I click on the filter", () => {
     NavBar.ClickFilterInput()
 })
 
-Then("I see the filter {string} in the list", () => {
-    NavBar.ClickFilterInput()
+Then("I see the filter {string} in the list", (filter) => {
+    NavBar.ValidateFilterWasSearched(filter)
 })
 
 Then("I see the SOTI enviroment options are {string}", (status) => {

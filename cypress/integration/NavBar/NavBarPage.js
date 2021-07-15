@@ -117,7 +117,12 @@ class NavBar {
         Selectors.navBar('searchTerm')
             .should('be.visible').click()
     }
-    
+
+    static ValidateFilterWasSearched(filter) {
+        Selectors.navBar('lastSearch').find('option[value=' + filter + ']')
+            .should('have.length.at.least', 1)
+    }
+
     static ValidateRadiosAreStatus(status) {
         Selectors.navBar('radioButtons').eq(0)
             .should('be.' + status)

@@ -34,17 +34,15 @@ class OmniOne {
     }
 
     static GoToUrl(url, expectedCode) {
-        cy.log('Making an API request to ' + url)
+        cy.log('Making a API request to ' + url +
+            ' and expecting to get the code: ' + expectedCode)
         cy.request({ "url": url, "failOnStatusCode": false }).then((resp) => {
             expect(resp.status).to.eq(expectedCode)
         })
     }
 
     static ValidateMultipleCodes(datatable) {
-        cy.log('Making API requests with Data Tables data ' + this.url)
-        var table = datatable.rawTable.slice(1)
-        console.log("a, ", table)
-
+        // console.log("a, ", table)
         datatable.hashes().forEach(elem => {
             Selectors.esPage('cardTitle')
                 .contains(elem.card).parent().parent().next().find('a').as('link')
