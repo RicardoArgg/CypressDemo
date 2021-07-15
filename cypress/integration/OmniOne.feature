@@ -12,7 +12,7 @@ Feature: Support Tools Portal testing Demo - Omnitracs One page feature
 
     @TC-ID031 @GeniusBar
     Scenario Outline: Validate cards from Omnitracs One tab contains correct links
-        Given I click the Omnitracs One tab
+        Given I click the 'Omnitracs One' tab
         Then I validate '7' cards are displayed
         And I see '<card-title>' card on screen
         And I validate the '<card-title>' card contains a link
