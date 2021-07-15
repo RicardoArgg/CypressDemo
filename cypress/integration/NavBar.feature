@@ -128,7 +128,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Group GUID | 44EC722696F64D1BB2306BC8DCBAD6AE |
 
     @TC-ID011 @GeniusBar @negative
-    Scenario Outline: BA does not exist error is displayed when we search '<filter>' by Business GUID
+    Scenario Outline: BA does not exist error is displayed when we search by Business GUID
         Given I select from the dropdown the option 'Business GUID'
         And I enter a filter '<filter>'
         And I click on search
@@ -141,7 +141,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | 76BE304C337A01EEB9A86B80AE0415CB |
 
     @TC-ID012 @GeniusBar @negative
-    Scenario Outline: Not found error is displayed when we search '<filter>' by Device Group GUID
+    Scenario Outline: Not found error is displayed when we search by Device Group GUID
         Given I select from the dropdown the option 'Device Group GUID'
         And I enter a filter '<filter>'
         And I click on search
@@ -154,7 +154,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | 423E3F9132E8A414365A55486A1E2C4B |
 
     @TC-ID013 @GeniusBar @negative
-    Scenario Outline: Get an error about the invalid filter format when we search <filter> by '<option>'
+    Scenario Outline: Get an error about the invalid filter format when we search by '<option>'
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
         And I click on search
