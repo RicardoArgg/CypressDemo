@@ -119,6 +119,8 @@ class NavBar {
     }
 
     static ValidateFilterWasSearched(filter) {
+        cy.log("Validating the " + filter +
+            " appears at least once in the option from the filter dropdown")
         Selectors.navBar('lastSearch').find('option[value=' + filter + ']')
             .should('have.length.at.least', 1)
     }
@@ -128,6 +130,12 @@ class NavBar {
             .should('be.' + status)
         Selectors.navBar('radioButtons').eq(1)
             .should('be.' + status)
+    }
+
+    static ValidateFiltersWereSearched(datatable) {
+        datatable.hashes().forEach(elem => {
+            this.ValidateFilterWasSearched(elem.filters)
+        });
     }
 }
 

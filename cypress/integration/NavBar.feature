@@ -6,7 +6,6 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         login the user and open the 'support tools page'
         Given I log in
         Then I Validate the support tools portal is loaded
-        And I visit home
 
     @TC-ID001 @GeniusBar @deprecated
     Scenario: Go to ES tab and validate cards
@@ -43,7 +42,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Group GUID |
 
     @TC-ID005 @GeniusBar @negative
-    Scenario Outline: SOTI enviroments are enabled only in searches by Device ID
+    Scenario Outline: SOTI enviroment radio buttons are '<status>' when we try to search by '<option>'
         Given I select from the dropdown the option '<option>'
         And I click on search
         Then I see the SOTI enviroment options are '<status>'
@@ -55,7 +54,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Group GUID | disabled |
 
     @TC-ID006 @GeniusBar @positive
-    Scenario Outline: Search valid Device Ids return correct values
+    Scenario Outline: Serial number is loaded successfully for the Device ID: <filter> in <enviroment> SOTI
         Given I select from the dropdown the option 'Device Id'
         And I enter a filter '<filter>'
         And I click the radio option for '<enviroment>'
@@ -71,7 +70,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | 170001029 | UAT        |
 
     @TC-ID007 @GeniusBar
-    Scenario Outline: Validate business MEID for SOTI enviroments with valid devices
+    Scenario Outline: Business MEID is loaded successfully for the Device ID: <filter>
         Given I select from the dropdown the option 'Device Id'
         And I enter a filter '<filter>'
         And I click the radio option for '<enviroment>'
@@ -87,7 +86,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | 170001029 | UAT        | 356207071260880 |
 
     @TC-ID008 @GeniusBar @negative
-    Scenario Outline: Get 'device not found' error searching by Device Id and SOTI
+    Scenario Outline: Device not found error is displayed searching <option> by Device Id in '<enviroment>' enviroment
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
         And I click the radio option for '<enviroment>'
@@ -129,7 +128,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Group GUID | 44EC722696F64D1BB2306BC8DCBAD6AE |
 
     @TC-ID011 @GeniusBar @negative
-    Scenario Outline: Get not found error searching by Business GUID
+    Scenario Outline: BA does not exist error is displayed when we search '<filter>' by Business GUID
         Given I select from the dropdown the option 'Business GUID'
         And I enter a filter '<filter>'
         And I click on search
@@ -142,7 +141,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | 76BE304C337A01EEB9A86B80AE0415CB |
 
     @TC-ID012 @GeniusBar @negative
-    Scenario Outline: Get not found error searching by Device Group GUID
+    Scenario Outline: Not found error is displayed when we search '<filter>' by Device Group GUID
         Given I select from the dropdown the option 'Device Group GUID'
         And I enter a filter '<filter>'
         And I click on search
@@ -174,17 +173,31 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | Device Group GUID | BEB84C8EB9761B63E0437A01EC0A305A1S2 |
 
     @TC-ID014 @GeniusBar
-    Scenario Outline: <last-filters> is displayed in the history dropdown searching by '<option>'
-        Given I select from the dropdown the option '<option>'
+    Scenario: Last filters are displayed in the history dropdown by Device Id
+        Given I select from the dropdown the option 'Device Id'
         And I click on the filter
-        Then I see the filter '<last-filters>' in the list
+        Then I see the bellow filters saved in the dropdown searching
+            | filters   |
+            | 170012345 |
+            | 990001029 |
+            | 170001031 |
+            | 170001029 |
 
-        Examples:
-            | option            | last-filters                     |
-            | Device Id         | 170012345                        |
-            | Device Id         | 990001029                        |
-            | Device Id         | 170001031                        |
-            | Device Id         | 170001029                        |
-            | Device Group GUID | E8A4EFFE362C4604BF91B7729486A132 |
-            | Device Group GUID | 44EC722696F64D1BB2306BC8DCBAD6AE |
-            | Business GUID     | BEB84C8EB9761B63E0437A01EC0A3055 |
+    @TC-ID015 @GeniusBar
+    Scenario: Last filters are displayed in the history dropdown by Device Group GUID
+        Given I select from the dropdown the option 'Device Group GUID'
+        And I click on the filter
+        Then I see the bellow filters saved in the dropdown searching
+            | filters                          |
+            | E8A4EFFE362C4604BF91B7729486A132 |
+            | 44EC722696F64D1BB2306BC8DCBAD6AE |
+
+    @TC-ID016 @GeniusBar
+    Scenario: Last filters are displayed in the history dropdown by Business GUID
+        Given I select from the dropdown the option 'Business GUID'
+        And I click on the filter
+        Then I see the bellow filters saved in the dropdown searching
+            | filters                          |
+            | BEB84C8EB9761B63E0437A01EC0A3055 |
+            | 76BE304C337A01EEB9A86B80AE0415CB |
+            | 617911432F274CE496CBC1E4DC0005A1 |

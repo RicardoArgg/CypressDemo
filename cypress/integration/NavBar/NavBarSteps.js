@@ -95,3 +95,7 @@ Then("I see the filter {string} in the list", (filter) => {
 Then("I see the SOTI enviroment options are {string}", (status) => {
     NavBar.ValidateRadiosAreStatus(status)
 })
+
+Then("I see the bellow filters saved in the dropdown searching", (dataTable) => {
+    NavBar.ValidateFiltersWereSearched(dataTable)
+})
