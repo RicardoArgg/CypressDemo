@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import Selectors from '../../support/Selectors'
+import Loc from '../../support/Locators'
 
 class OmniOne {
 
@@ -11,17 +11,17 @@ class OmniOne {
     }
 
     static ValidateColumnsOnPage(numberOfColumns) {
-        Selectors.esPage('columnElements')
+        Loc.esPage('columnElements')
             .should('have.length', numberOfColumns)
     }
 
     static ValidateThereIsCard(cardText) {
-        Selectors.esPage('cardTitle')
+        Loc.esPage('cardTitle')
             .should('contain.text', cardText)
     }
 
     static ValidateCardContainsUrl(cardText) {
-        Selectors.esPage('cardTitle')
+        Loc.esPage('cardTitle')
             .contains(cardText).parent().parent().next().find('a').as('link')
         cy.get('@link').should('have.attr', 'href')
         cy.get('@link').invoke('attr', 'href').then((href) => {
@@ -42,9 +42,9 @@ class OmniOne {
     }
 
     static ValidateMultipleCodes(datatable) {
-        // console.log("a, ", table)
+        // console.log("Datatable: , ", table)
         datatable.hashes().forEach(elem => {
-            Selectors.esPage('cardTitle')
+            Loc.esPage('cardTitle')
                 .contains(elem.card).parent().parent().next().find('a').as('link')
             cy.get('@link').invoke('attr', 'href').then((href) => {
                 this.GoToUrl(href, parseInt(elem.response))

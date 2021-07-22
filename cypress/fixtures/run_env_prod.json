@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://support-tools.omnitracsone.com/",
+  "responseTimeout": 15000,
+  "env": {
+    "username": "omnioneadmin@patronweb.net",
+    "password": "Omnitracs17!"
+  }
+}

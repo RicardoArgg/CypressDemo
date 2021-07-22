@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import Selectors from '../../support/Selectors'
+import Loc from '../../support/Locators'
 
 var searchBy = {
     "Device Id": "DeviceId",
@@ -12,25 +12,20 @@ var radioValues = {
     "UAT": "sotiUatEnv",
 }
 
-var tabsElement = {
-    "ES": "esTab",
-    "Omnitracs One": "omnitracsOneTab",
-}
-
 class NavBar {
     static SelectDropdownValue(optionText) {
-        Selectors.navBar('searchByDropdown')
+        Loc.navBar('searchByDropdown')
             .should('be.visible').select(searchBy[optionText])
     }
 
     static SetFilter(filter) {
         cy.get('input[onload="setHistoryList()"]')
-        Selectors.navBar('searchTerm')
+        Loc.navBar('searchTerm')
             .should('be.visible').type(filter, { delay: 30 })
     }
 
     static ClickSearch() {
-        Selectors.navBar('searchButton')
+        Loc.navBar('searchButton')
             .should('be.visible').click()
     }
 
@@ -39,7 +34,7 @@ class NavBar {
         //.find('span').should('not.exist');
         // cy.get('st-device > div > span').should('not.exist');
         cy.wait(7500)
-        Selectors.navBar('inputErrorMessage')
+        Loc.navBar('inputErrorMessage')
             .should('not.exist');
         // cy.get('div[class="margin-text-validation"]')
         //.next().children().should('not.exist')
@@ -50,59 +45,59 @@ class NavBar {
     }
 
     static SelectRadioButton(radioText) {
-        Selectors.navBar('radioButtons')
+        Loc.navBar('radioButtons')
             .check(radioValues[radioText])
     }
 
     static ValidateColumnsOnPage(numberOfColumns) {
-        Selectors.esPage('columnElements')
+        Loc.esPage('columnElements')
             .should('have.length', numberOfColumns)
     }
 
     static ClickTabByText(tabText) {
         cy.wait(3000)
-        Selectors.navBar(tabText + ' tab').click()
+        Loc.navBar(tabText + 'tab').click()
     }
 
     static ValidateResultsDivs() {
-        Selectors.navBar('DeviceInfoElements')
+        Loc.navBar('DeviceInfoElements')
             .should('have.length.at.least', 1)
     }
 
     static ValidateThereAreNoResults() {
-        Selectors.navBar('DeviceInfoElements')
+        Loc.navBar('DeviceInfoElements')
             .should('not.exist')
     }
 
     static ValidateBusinessGuidIsNotEmpty() {
-        Selectors.navBar('businessGuidResult')
+        Loc.navBar('businessGuidResult')
             .first().next()
             .should('not.have.text', '')
     }
 
     static ValidateBusinessGuidIs(businessGuid) {
-        Selectors.navBar('businessGuidResult').eq(1)
+        Loc.navBar('businessGuidResult').eq(1)
             .should('have.text', businessGuid)
     }
 
     static ValidateBusinessGroupGuidIs(groupGuid) {
-        Selectors.navBar('businessGuidResult').first()
+        Loc.navBar('businessGuidResult').first()
             .should('have.text', groupGuid)
     }
 
     static ValidateDeviceIdIs(deviceId) {
-        Selectors.navBar('resultsData').eq(4)
+        Loc.navBar('resultsData').eq(4)
             .should('contains.text', deviceId)
     }
 
     static ValidateTabIsSelected(tabText) {
-        Selectors.navBar(tabText + ' tab')
+        Loc.navBar(tabText + ' tab')
             .invoke('attr', 'class')
             .should('contain', 'is-active')
     }
 
     static ValidateMeidByEnv(expected) {
-        Selectors.navBar('resultsStrong').eq(3)
+        Loc.navBar('resultsStrong').eq(3)
             .invoke('text').then((txt) => {
                 if (txt.includes('-')) {
                     expect(txt).to.be.equal(' - ')
@@ -114,21 +109,21 @@ class NavBar {
     }
 
     static ClickFilterInput() {
-        Selectors.navBar('searchTerm')
+        Loc.navBar('searchTerm')
             .should('be.visible').click()
     }
 
     static ValidateFilterWasSearched(filter) {
         cy.log("Validating the " + filter +
             " appears at least once in the option from the filter dropdown")
-        Selectors.navBar('lastSearch').find('option[value=' + filter + ']')
+        Loc.navBar('lastSearch').find('option[value=' + filter + ']')
             .should('have.length.at.least', 1)
     }
 
     static ValidateRadiosAreStatus(status) {
-        Selectors.navBar('radioButtons').eq(0)
+        Loc.navBar('radioButtons').eq(0)
             .should('be.' + status)
-        Selectors.navBar('radioButtons').eq(1)
+        Loc.navBar('radioButtons').eq(1)
             .should('be.' + status)
     }
 

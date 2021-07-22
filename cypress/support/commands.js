@@ -9,7 +9,7 @@
 // ***********************************************
 //
 //
-import Selectors from './Selectors'
+import Loc from './Locators'
 
 let LOCAL_STORAGE_MEMORY = {};
 
@@ -40,25 +40,25 @@ Cypress.Commands.add('visitHome', function (timeOu) {
 })
 
 Cypress.Commands.add('loginSso', function () {
-   Selectors.loginSso('userInput').type(Cypress.env('username'))
-   Selectors.loginSso('submitUserButton').click()
-   Selectors.loginSso('passInput').type(Cypress.env('password'), { log: false })
-   Selectors.loginSso('submitCredButton').click()
+   Loc.loginSso('userInput').type(Cypress.env('username'))
+   Loc.loginSso('submitUserButton').click()
+   Loc.loginSso('passInput').type(Cypress.env('password'), { log: false })
+   Loc.loginSso('submitCredButton').click()
 })
 
 Cypress.Commands.add('loginOne', function () {
    cy.log("Executing OmnitracsOne Login...")
-   Selectors.loginOne('userInput').type(Cypress.env('username'))
-   Selectors.loginOne('submitUserButton').click()
-   Selectors.loginOne('userValidation').should('have.text', Cypress.env('username'))
-   Selectors.loginOne('passInput').type(Cypress.env('password'), { log: false })
-   Selectors.loginOne('submitCredButton').click()
+   Loc.loginOne('userInput').type(Cypress.env('username'))
+   Loc.loginOne('submitUserButton').click()
+   Loc.loginOne('userValidation').should('have.text', Cypress.env('username'))
+   Loc.loginOne('passInput').type(Cypress.env('password'), { log: false })
+   Loc.loginOne('submitCredButton').click()
 
 })
 
 Cypress.Commands.add('validateSupportTools', function () {
    cy.log("Validating canvas from home is loaded")
-   Selectors.navBar('pieCanvas').should('be.visible')
+   Loc.navBar('pieCanvas').should('be.visible')
 })
 
 Cypress.Commands.add('newUrl', function () {
@@ -74,24 +74,24 @@ Cypress.Commands.add('newUrl', function () {
 
 Cypress.Commands.add('WaitSsoLogin', function () {
    cy.log("Waiting for the Omnitracs logo to load")
-   Selectors.loginSso('WaitLogin').should('be.visible')
+   Loc.loginSso('WaitLogin').should('be.visible')
 })
 
 Cypress.Commands.add('WaitOneLogin', function () {
    cy.log("Waiting for the Omnitracs New login element to load")
-   Selectors.loginOne('WaitLogin').should('be.visible')
+   Loc.loginOne('WaitLogin').should('be.visible')
 })
 
 Cypress.Commands.add("saveLocalStorage", () => {
-  Object.keys(localStorage).forEach(key => {
-    LOCAL_STORAGE_MEMORY[key] = localStorage[key];
-  });
+   Object.keys(localStorage).forEach(key => {
+      LOCAL_STORAGE_MEMORY[key] = localStorage[key];
+   });
 });
 
 Cypress.Commands.add("restoreLocalStorage", () => {
-  Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
-    localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
-  });
+   Object.keys(LOCAL_STORAGE_MEMORY).forEach(key => {
+      localStorage.setItem(key, LOCAL_STORAGE_MEMORY[key]);
+   });
 });
 
 //

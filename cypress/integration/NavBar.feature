@@ -32,7 +32,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     @TC-ID004 @GeniusBar @negative
     Scenario Outline: Empty search error is displayed when filter is empty searching by '<option>'
         Given I select from the dropdown the option '<option>'
-        And I click on search
+        When I click on search
         Then I get an error about the required field
 
         Examples:
@@ -44,7 +44,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     @TC-ID005 @GeniusBar @negative
     Scenario Outline: SOTI enviroment radio buttons are '<status>' when we try to search by '<option>'
         Given I select from the dropdown the option '<option>'
-        And I click on search
+        When I click on search
         Then I see the SOTI enviroment options are '<status>'
 
         Examples:
@@ -58,7 +58,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         Given I select from the dropdown the option 'Device Id'
         And I enter a filter '<filter>'
         And I click the radio option for '<enviroment>'
-        And I click on search
+        When I click on search
         Then I dont get any errors
         And I see Device Id '<filter>' as serial number in the results
 
@@ -74,7 +74,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         Given I select from the dropdown the option 'Device Id'
         And I enter a filter '<filter>'
         And I click the radio option for '<enviroment>'
-        And I click on search
+        When I click on search
         Then I dont get any errors
         And I validate the MEID is '<meid>' as expected
 
@@ -90,7 +90,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
         And I click the radio option for '<enviroment>'
-        And I click on search
+        When I click on search
         Then I see an error message about device not found
         And I dont see results displayed
 
@@ -105,7 +105,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     Scenario Outline: Valid results searching by Business GUID are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
-        And I click on search
+        When I click on search
         Then I dont get any errors
         And I see Business GUID '<filter>' in the results
 
@@ -118,7 +118,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     Scenario Outline: Valid results searching by Business Group GUID are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
-        And I click on search
+        When I click on search
         Then I dont get any errors
         And I see Business Group GUID '<filter>' in the results
 
@@ -131,7 +131,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     Scenario Outline: BA does not exist error is displayed when we search by Business GUID
         Given I select from the dropdown the option 'Business GUID'
         And I enter a filter '<filter>'
-        And I click on search
+        When I click on search
         Then I see an error message "business account id doesn't exist"
 
         Examples:
@@ -144,7 +144,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     Scenario Outline: Not found error is displayed when we search by Device Group GUID
         Given I select from the dropdown the option 'Device Group GUID'
         And I enter a filter '<filter>'
-        And I click on search
+        When I click on search
         Then I see an error message 'Device group not found'
 
         Examples:
@@ -175,7 +175,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     @TC-ID014 @GeniusBar
     Scenario: Last filters are displayed in the history dropdown by Device Id
         Given I select from the dropdown the option 'Device Id'
-        And I click on the filter
+        When I click on the filter
         Then I see the bellow filters saved in the dropdown searching
             | filters   |
             | 170012345 |
@@ -186,7 +186,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     @TC-ID015 @GeniusBar
     Scenario: Last filters are displayed in the history dropdown by Device Group GUID
         Given I select from the dropdown the option 'Device Group GUID'
-        And I click on the filter
+        When I click on the filter
         Then I see the bellow filters saved in the dropdown searching
             | filters                          |
             | E8A4EFFE362C4604BF91B7729486A132 |
@@ -195,7 +195,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
     @TC-ID016 @GeniusBar
     Scenario: Last filters are displayed in the history dropdown by Business GUID
         Given I select from the dropdown the option 'Business GUID'
-        And I click on the filter
+        When I click on the filter
         Then I see the bellow filters saved in the dropdown searching
             | filters                          |
             | BEB84C8EB9761B63E0437A01EC0A3055 |

@@ -1,5 +1,5 @@
 /// <reference types="Cypress" />
-import { Given, When, And, Then, defineStep } from "cypress-cucumber-preprocessor/steps";
+import { Given, And, Then, defineStep } from "cypress-cucumber-preprocessor/steps";
 
 import NavBar from './NavBarPage';
 
@@ -28,7 +28,7 @@ Then("I validate the Omnitracs One page", function () {
     NavBar.ValidateColumnsOnPage(7)
 })
 
-Given("I click on search", function () {
+defineStep("I click on search", function () {
     NavBar.ClickSearch()
 })
 
@@ -84,7 +84,7 @@ And("I validate the MEID is {string} as expected", (enviroment) => {
     NavBar.ValidateMeidByEnv(enviroment)
 })
 
-And("I click on the filter", () => {
+defineStep("I click on the filter", () => {
     NavBar.ClickFilterInput()
 })
 

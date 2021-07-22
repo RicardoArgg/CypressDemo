@@ -27,5 +27,8 @@
       "filePrefix": "",
       "fileSuffix": "_cucumber"
     }
+  },
+  "devDependencies": {
+    "@cypress/mocha-teamcity-reporter": "^1.0.0"
   }
 }
