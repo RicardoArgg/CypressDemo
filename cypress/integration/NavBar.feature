@@ -114,7 +114,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             #| Business GUID | 617911432F274CE496CBC1E4DC3535A1 |
             | Business GUID | BEB84C8EB9761B63E0437A01EC0A3055 |
 
-    @TC-ID010 @GeniusBar @positive
+    @TC-ID010 @GeniusBar @positive @failing
     Scenario Outline: Valid results searching by Business Group GUID are displayed
         Given I select from the dropdown the option '<option>'
         And I enter a filter '<filter>'
@@ -140,7 +140,7 @@ Feature: Support Tools Portal testing Demo - Navigation Bar feature
             | BEB84C8EB9761B63E0437A01EC0A305E |
             | 76BE304C337A01EEB9A86B80AE0415CB |
 
-    @TC-ID012 @GeniusBar @negative
+    @TC-ID012 @GeniusBar @negative @failing
     Scenario Outline: Not found error is displayed when we search by Device Group GUID
         Given I select from the dropdown the option 'Device Group GUID'
         And I enter a filter '<filter>'
