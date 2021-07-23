@@ -15,6 +15,7 @@
 
 // Import commands.js using ES2015 syntax:
 import './commands'
+import './Locators'
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

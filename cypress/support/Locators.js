@@ -2,6 +2,7 @@
 
 
 class Loc {
+
     static navBarLocators = {
         searchByDropdown:       'select[name="searchBy"]',
         searchTerm:             'input[onload="setHistoryList()"]',
@@ -43,23 +44,28 @@ class Loc {
         WaitLogin:          '.left-pan-input'
     }
 
-
-    static navBar(webElement) {
-        cy.log(webElement)
-        return cy.get(this.navBarLocators[webElement]);
+    static navBar(webElement, timeout = null) {
+        return this.getElement(this.navBarLocators, webElement, timeout)
     }
 
     static esPage(webElement) {
-        return cy.get(this.esPageLocators[webElement]);
+        return this.getElement(this.esPageLocators, webElement, timeout)
     }
 
     static loginSso(webElement) {
-        return cy.get(this.loginOneLocators[webElement]);
+        return this.getElement(this.loginSsoLocators, webElement, timeout)
     }
 
-    static loginOne(webElement) {
-        return cy.get(this.loginOneLocators[webElement]);
+    static loginOne(webElement, timeout = null) {
+        return this.getElement(this.loginOneLocators, webElement, timeout)
     }
 
+    static getElement(dict, webElement, timeout) {
+        if (timeout) {
+            return cy.get(dict[webElement], { timeout: timeout });
+        }
+        return cy.get(dict[webElement]);
+    }
 }
+
 export default Loc;
