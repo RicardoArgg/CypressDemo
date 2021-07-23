@@ -45,23 +45,19 @@ class Loc {
 
 
     static navBar(webElement) {
-        webElement = webElement.replace(' ','');
         cy.log(webElement)
         return cy.get(this.navBarLocators[webElement]);
     }
 
     static esPage(webElement) {
-        webElement = webElement.replace(' ','');
         return cy.get(this.esPageLocators[webElement]);
     }
 
     static loginSso(webElement) {
-        webElement = webElement.replace(' ','');
         return cy.get(this.loginOneLocators[webElement]);
     }
 
     static loginOne(webElement) {
-        webElement = webElement.replace(' ','');
         return cy.get(this.loginOneLocators[webElement]);
     }
 

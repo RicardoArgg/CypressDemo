@@ -56,7 +56,7 @@ class NavBar {
 
     static ClickTabByText(tabText) {
         cy.wait(3000)
-        Loc.navBar(tabText + 'tab').click()
+        Loc.navBar(tabText.replace(' ', '') + 'tab').click()
     }
 
     static ValidateResultsDivs() {

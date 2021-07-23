@@ -4,10 +4,7 @@
   "description": "Cypress Demo for support-tools project",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open -e configFile=dev",
-    "mocha-merge": "mochawesome-merge ./cypress/report/mochawesome_reports/*.json -o cypress/report/mochawesome_complete/complete-report.json",
-    "mocha-marge": "marge cypress/report/mochawesome_complete/complete-report.json -f complete-report -o cypress/report/mochawesome_complete",
-    "mocha-full": "npm run mocha-merge && npm run mocha-marge"
+    "test": "npx cypress open -e configFile=dev"
   },
   "author": "Ricardo Arreola",
   "license": "ISC",
@@ -17,7 +14,8 @@
     "mocha": "^9.0.2",
     "mochawesome": "^4.1.0",
     "mochawesome-merge": "^4.2.0",
-    "mochawesome-report-generator": "^5.2.0"
+    "mochawesome-report-generator": "^5.2.0",
+    "@cypress/mocha-teamcity-reporter": "^1.0.0"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true,
@@ -27,8 +25,5 @@
       "filePrefix": "",
       "fileSuffix": "_cucumber"
     }
-  },
-  "devDependencies": {
-    "@cypress/mocha-teamcity-reporter": "^1.0.0"
   }
 }
