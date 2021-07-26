@@ -91,7 +91,7 @@ class NavBar {
     }
 
     static ValidateTabIsSelected(tabText) {
-        Loc.navBar(tabText + ' tab')
+        Loc.navBar(tabText.replace(' ', '') + 'tab')
             .invoke('attr', 'class')
             .should('contain', 'is-active')
     }

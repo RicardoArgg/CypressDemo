@@ -9,7 +9,6 @@ class Loc {
         searchButton:           'button[class="button is-primary is-rounded"]',
         inputErrorMessage:      'st-device > div > span',
         radioButtons:           'input[type="radio"]',
-        omnitracsOneTab:        'a[href="/omnitracsone"]',
         EStab:                  'a[href="/es"]',
         OmnitracsOnetab:        'a[href="/omnitracsone"]',
         DeviceInfoElements:     'div.div-info',
