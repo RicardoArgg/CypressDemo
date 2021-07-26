@@ -1,4 +1,5 @@
 /// <reference types="Cypress" />
+import Loc from '../../support/Locators'
 
 class EsPage {
     static ValidateColumnsOnPage(numberOfColumns) {

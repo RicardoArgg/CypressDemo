@@ -48,11 +48,11 @@ class Loc {
         return this.getElement(this.navBarLocators, webElement, timeout)
     }
 
-    static esPage(webElement) {
+    static esPage(webElement, timeout = null) {
         return this.getElement(this.esPageLocators, webElement, timeout)
     }
 
-    static loginSso(webElement) {
+    static loginSso(webElement, timeout = null) {
         return this.getElement(this.loginSsoLocators, webElement, timeout)
     }
 
